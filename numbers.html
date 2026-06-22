@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers Learning - YellowPaws</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="numbers-container">
+
+        <h1>🔢 Learn Numbers</h1>
+
+        <div class="number-card">
+
+            <h2 id="number">1</h2>
+
+            <div id="objects" class="objects">
+                ⭐
+            </div>
+
+            <h3 id="numberText">
+                One
+            </h3>
+
+        </div>
+
+        <div class="controls">
+
+            <button onclick="previousNumber()">
+                ⬅ Previous
+            </button>
+
+            <button onclick="speakNumber()">
+                🔊 Speak
+            </button>
+
+            <button onclick="testPronunciation()" style="background-color: #6BCBFF;">
+                🎤 Pronounce
+            </button>
+
+            <button onclick="nextNumber()">
+                Next ➡
+            </button>
+
+        </div>
+
+        <br>
+
+        <button onclick="location.href='learninghub.html'">
+            🏠 Back to Hub
+        </button>
+
+    </div>
+
+    <script src="js/speech.js"></script>
+    <script src="js/numbers.js"></script>
+    <script src="js/timer.js"></script>
+
+</body>
+
+</html>

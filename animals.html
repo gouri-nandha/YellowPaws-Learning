@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals Learning - YellowPaws</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="animals-container">
+
+        <h1>🐶 Learn Animals</h1>
+
+        <div class="animal-card">
+
+            <div id="animalEmoji" class="animal-emoji">
+                🐶
+            </div>
+
+            <h2 id="animalName">
+                Dog
+            </h2>
+
+        </div>
+
+        <div class="controls">
+
+            <button onclick="previousAnimal()">
+                ⬅ Previous
+            </button>
+
+            <button onclick="speakAnimal()">
+                🔊 Speak
+            </button>
+
+            <button onclick="testPronunciation()" style="background-color: #6BCBFF;">
+                🎤 Pronounce
+            </button>
+
+            <button onclick="playAnimalSound()">
+                🎵 Sound
+            </button>
+
+            <button onclick="nextAnimal()">
+                Next ➡
+            </button>
+
+        </div>
+
+        <br>
+
+        <button onclick="location.href='learninghub.html'">
+            🏠 Back to Hub
+        </button>
+
+    </div>
+
+    <script src="js/speech.js"></script>
+    <script src="js/animals.js"></script>
+    <script src="js/timer.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+
+<!-- PIN Screen -->
+<div id="pinSection" class="parent-container">
+
+    <h1>🔒 Parent Area</h1>
+
+    <input
+        type="password"
+        id="pinInput"
+        placeholder="Enter PIN"
+    >
+
+    <button onclick="verifyPin()">
+        Access Dashboard
+    </button>
+
+    <p id="pinMessage"></p>
+
+</div>
+
+<!-- Dashboard -->
+<div
+    id="dashboard"
+    class="parent-container"
+    style="display:none;"
+>
+
+    <h1>👨‍👩‍👧 Parent Dashboard</h1>
+
+    <div class="dashboard-card">
+        <h2>👦 Child Info</h2>
+        <p><strong>Avatar:</strong> <span id="childAvatar">🐶</span></p>
+        <p><strong>Nickname:</strong> <span id="childNickname">Unknown</span></p>
+        <p><strong>Current Rank:</strong> <span id="childRank">Beginner</span></p>
+    </div>
+
+    <div class="dashboard-card">
+
+        <h2>⭐ Stars Earned</h2>
+
+        <p id="totalStars">0</p>
+
+    </div>
+
+    <div class="dashboard-card">
+        <h2>📊 Progress Chart</h2>
+        <canvas id="progressChart" width="400" height="200"></canvas>
+    </div>
+
+    <div class="dashboard-card">
+
+        <h2>📝 Quizzes Completed</h2>
+
+        <p id="quizCount">0</p>
+
+    </div>
+
+    <div class="dashboard-card">
+
+        <h2>⏱ Screen Time Limit</h2>
+
+        <select id="timeLimit">
+
+            <option value="15">
+                15 Minutes
+            </option>
+
+            <option value="30">
+                30 Minutes
+            </option>
+
+            <option value="60">
+                1 Hour
+            </option>
+
+            <option value="120">
+                2 Hours
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <button onclick="saveTimeLimit()">
+            Save Limit
+        </button>
+
+    </div>
+
+    <div class="dashboard-card">
+
+        <h2>⌛ Time Used</h2>
+
+        <p id="timeUsed">
+            0 Minutes
+        </p>
+
+    </div>
+
+    <div class="dashboard-card">
+        <h2>⚙️ Controls</h2>
+        <button onclick="resetStars()">Reset Stars</button>
+        <button onclick="exportReport()">Export Report</button>
+        <button onclick="resetProgress()" style="background-color:#ff6b6b; color:white;">Reset All Progress</button>
+    </div>
+    
+    <button onclick="location.href='index.html'">Back Home</button>
+
+</div>
+
+<script src="js/parent.js"></script>
+```
+
+</body>
+</html>

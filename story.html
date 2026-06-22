@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Time</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .story-container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .story-text {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+        .story-image {
+            font-size: 5rem;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="hub-container">
+        <h1>📖 Story Time</h1>
+        
+        <div class="story-container">
+            <h2 id="storyTitle">Loading Story...</h2>
+            <div id="storyImage" class="story-image">📚</div>
+            <p id="storyText" class="story-text">Please wait...</p>
+            
+            <div style="display:flex; justify-content:center; gap:10px;">
+                <button onclick="readAloud()" style="background-color: #6BCBFF;">🔊 Read Aloud</button>
+                <button onclick="nextPage()">Next Page ➡</button>
+            </div>
+        </div>
+
+        <button onclick="location.href='learninghub.html'">🏠 Back to Hub</button>
+    </div>
+    
+    <script src="js/story.js"></script>
+    <script src="js/timer.js"></script>
+</body>
+</html>

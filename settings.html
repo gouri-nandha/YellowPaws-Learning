@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="parent-container">
+        <h1>⚙️ Settings</h1>
+
+        <div class="dashboard-card">
+            <h2>🎵 Audio</h2>
+            <button onclick="toggleSetting('musicOn')" id="btn-musicOn">Music: Off</button>
+            <button onclick="toggleSetting('soundOn')" id="btn-soundOn">Sound Effects: Off</button>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>🎨 Personalization</h2>
+            <button onclick="location.href='theme.html'">Choose Theme</button>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>⚠️ Danger Zone</h2>
+            <button onclick="resetApp()" style="background-color: #ff6b6b; color: white;">Reset App</button>
+        </div>
+
+        <button onclick="location.href='index.html'">Back Home</button>
+    </div>
+
+    <script src="js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Profile</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="profile-container">
+
+        <h1>🐶 Create Your Profile</h1>
+
+        <p>Choose your avatar and nickname!</p>
+
+        <div class="avatar-grid">
+
+            <div class="avatar" onclick="selectAvatar('🐶')">🐶</div>
+            <div class="avatar" onclick="selectAvatar('🐼')">🐼</div>
+            <div class="avatar" onclick="selectAvatar('🐰')">🐰</div>
+            <div class="avatar" onclick="selectAvatar('🦁')">🦁</div>
+            <div class="avatar" onclick="selectAvatar('🐯')">🐯</div>
+            <div class="avatar" onclick="selectAvatar('🐨')">🐨</div>
+
+        </div>
+
+        <input
+            type="text"
+            id="nickname"
+            placeholder="Enter your nickname"
+        >
+
+        <br><br>
+
+        <button onclick="saveProfile()">
+            Save Profile
+        </button>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script src="js/profile.js"></script>
+    <script src="js/timer.js"></script>
+
+</body>
+</html>

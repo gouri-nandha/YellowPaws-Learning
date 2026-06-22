@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Hub</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="learn-container">
+
+        <div class="profile-header">
+
+            <div id="avatarDisplay"></div>
+
+            <div>
+                <h2 id="welcomeText"></h2>
+                <p>⭐ Stars: <span id="starCount">0</span></p>
+            </div>
+
+        </div>
+
+        <h1>📚 Learning Hub</h1>
+
+        <div class="subject-grid">
+
+            <div class="subject-card" onclick="startQuiz('abc')">
+                🔤
+                <h3>ABC Learning</h3>
+            </div>
+
+            <div class="subject-card" onclick="startQuiz('numbers')">
+                🔢
+                <h3>Numbers</h3>
+            </div>
+
+            <div class="subject-card" onclick="startQuiz('science')">
+                🧪
+                <h3>Science</h3>
+            </div>
+
+            <div class="subject-card" onclick="startQuiz('gk')">
+                🌍
+                <h3>General Knowledge</h3>
+            </div>
+            <div class="subject-card" onclick="window.location.href='challenges.html'">
+                 ⭐
+                <h3>Daily Challenge</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/learn.js"></script>
+    <script src="js/timer.js"></script>
+
+</body>
+</html>

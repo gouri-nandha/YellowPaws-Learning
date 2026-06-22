@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tutor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="learn-container">
+        <h1>🤖 YellowPaws AI Tutor</h1>
+
+        <div class="challenge-card" style="text-align: left; height: 300px; overflow-y: auto; background: #fff;" id="chatLog">
+            <p><strong>🤖 AI Tutor:</strong> Hello! Ask me anything like "What is a lion?" or "Why is the sky blue?"</p>
+        </div>
+
+        <div style="display:flex; gap:10px; margin-top:20px; max-width:800px; width:100%;">
+            <input type="text" id="chatInput" placeholder="Ask a question..." style="flex:1; padding:15px; font-size:18px; border-radius:15px; border:2px solid #ccc;">
+            <button onclick="askQuestion()" style="margin:0; width:auto; padding:15px 30px;">Ask</button>
+        </div>
+
+        <button onclick="location.href='learninghub.html'" style="margin-top:20px;">Back to Hub</button>
+    </div>
+
+    <script src="js/ai.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Theme</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="theme-container">
+
+        <h1>🌈 Choose Your Learning World</h1>
+
+        <div class="theme-grid">
+
+            <div class="theme-card jungle" onclick="selectTheme('jungle')">
+                🌳
+                <h2>Jungle Adventure</h2>
+            </div>
+
+            <div class="theme-card space" onclick="selectTheme('space')">
+                🚀
+                <h2>Space Explorer</h2>
+            </div>
+
+            <div class="theme-card ocean" onclick="selectTheme('ocean')">
+                🌊
+                <h2>Ocean World</h2>
+            </div>
+
+            <div class="theme-card fantasy" onclick="selectTheme('fantasy')">
+                🏰
+                <h2>Fantasy Kingdom</h2>
+            </div>
+
+            <div class="theme-card rainbow" onclick="selectTheme('rainbow')">
+                🌈
+                <h2>Rainbow Land</h2>
+            </div>
+
+        </div>
+
+        <p id="selectedTheme"></p>
+
+        <button onclick="goHome()">
+            Back Home
+        </button>
+
+    </div>
+
+    <script src="js/themes.js"></script>
+
+</body>
+</html>

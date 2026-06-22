@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Learning - YellowPaws</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="alphabet-container">
+
+        <h1>🐶 Learn the Alphabet</h1>
+
+        <div class="alphabet-card">
+
+            <h2 id="letter">A</h2>
+
+            <div id="emoji" class="emoji">
+                🍎
+            </div>
+
+            <h3 id="word">
+                A for Apple
+            </h3>
+
+        </div>
+
+        <div class="controls">
+
+            <button onclick="previousLetter()">
+                ⬅ Previous
+            </button>
+
+            <button onclick="speakLetter()">
+                🔊 Speak
+            </button>
+
+            <button onclick="testPronunciation()" style="background-color: #6BCBFF;">
+                🎤 Pronounce
+            </button>
+
+            <button onclick="nextLetter()">
+                Next ➡
+            </button>
+
+        </div>
+
+        <br>
+
+        <button onclick="location.href='learninghub.html'">
+            🏠 Back to Hub
+        </button>
+
+    </div>
+
+    <script src="js/speech.js"></script>
+    <script src="js/alphabet.js"></script>
+    <script src="js/timer.js"></script>
+
+</body>
+
+</html>

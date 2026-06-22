@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YellowPaws Learning Hub</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="hub-container">
+
+        <div class="profile-card">
+            <h1 id="avatar">🐶</h1>
+            <h2>👦 <span id="nickname">Friend</span></h2>
+            <h3>⭐ Total Stars: <span id="stars">0</span></h3>
+            <h4>🏅 Current Rank: <span id="rankTitle">Beginner</span></h4>
+            <h4 style="color:#ff6b6b; margin-top:10px;">🔥 Streak: <span id="streakCount">0</span> Days</h4>
+        </div>
+
+        <div class="challenge-card" onclick="location.href='dailychallenge.html'" style="cursor:pointer;">
+            <h2 id="dailyChallenge">🎯 Daily Challenge</h2>
+            <p>Complete learning modules to earn bonus stars!</p>
+        </div>
+
+        <h2>📚 Learning Modules</h2>
+
+        <div class="subject-grid">
+
+            <div class="subject-card" onclick="location.href='alphabet.html'">
+                🔤 ABC Learning
+            </div>
+
+            <div class="subject-card" onclick="location.href='numbers.html'">
+                🔢 Numbers
+            </div>
+
+            <div class="subject-card" onclick="location.href='colors.html'">
+                🎨 Colors
+            </div>
+
+            <div class="subject-card" onclick="location.href='shapes.html'">
+                🔷 Shapes
+            </div>
+
+            <div class="subject-card" onclick="location.href='animals.html'">
+                🐶 Animals
+            </div>
+
+            <div class="subject-card" onclick="location.href='quiz.html'">
+                🏆 Quiz
+            </div>
+
+            <div class="subject-card" onclick="location.href='aitutor.html'">
+                🤖 AI Tutor
+            </div>
+
+            <div class="subject-card" onclick="location.href='badges.html'">
+                🏅 Badges
+            </div>
+
+            <div class="subject-card" onclick="location.href='story.html'" style="background-color: #A7F3A1;">
+                📖 Story Time
+            </div>
+
+            <div class="subject-card" onclick="location.href='shop.html'" style="background-color: #ffd700;">
+                🏪 Reward Shop
+            </div>
+
+            <div class="subject-card" onclick="location.href='certificate.html'">
+                📜 Certificate
+            </div>
+
+            <div class="subject-card" onclick="location.href='memory.html'">
+                🧩 Memory Game
+            </div>
+
+            <div class="subject-card" onclick="location.href='drawing.html'">
+                🎨 Drawing
+            </div>
+
+        </div>
+
+        <br>
+
+        <button onclick="location.href='settings.html'">
+            ⚙️ Settings
+        </button>
+
+        <button onclick="location.href='parent.html'">
+            🔒 Parent Dashboard
+        </button>
+
+        <button onclick="logout()">
+            🚪 Logout
+        </button>
+
+    </div>
+
+    <script src="js/learninghub.js"></script>
+    <script src="js/timer.js"></script>
+
+</body>
+
+</html>

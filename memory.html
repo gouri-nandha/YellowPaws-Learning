@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .memory-card {
+            background-color: white;
+            height: 80px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .memory-card.hidden {
+            background-color: #ffb703;
+            color: transparent;
+        }
+        .memory-card.matched {
+            background-color: #A7F3A1;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+    <div class="learn-container">
+        <h1>🧩 Memory Game</h1>
+        <h3 id="memoryStatus">Find all the matching pairs!</h3>
+        
+        <div class="memory-grid" id="memoryGrid"></div>
+        
+        <button onclick="location.href='learninghub.html'" style="margin-top: 30px;">Back to Hub</button>
+    </div>
+
+    <script src="js/memory.js"></script>
+</body>
+</html>

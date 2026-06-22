@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing & Coloring</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .drawing-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        #drawCanvas {
+            border: 4px solid #333;
+            border-radius: 10px;
+            background-color: #fff;
+            cursor: crosshair;
+        }
+        .tools {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            align-items: center;
+        }
+        .tool-btn {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background: #e0e0e0;
+        }
+        .tool-btn.active {
+            background: #ffb703;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="learn-container">
+        <h1>🎨 Drawing Book</h1>
+        
+        <div class="drawing-container">
+            <canvas id="drawCanvas" width="600" height="400"></canvas>
+            
+            <div class="tools">
+                <input type="color" id="colorPicker" value="#000000" style="width: 50px; height: 40px; cursor: pointer;">
+                <input type="range" id="brushSize" min="1" max="20" value="5">
+                <button class="tool-btn active" id="btnBrush" onclick="setTool('brush')">🖍️ Brush</button>
+                <button class="tool-btn" id="btnEraser" onclick="setTool('eraser')">🧼 Eraser</button>
+                <button class="tool-btn" onclick="clearCanvas()">🗑️ Clear</button>
+                <button class="tool-btn" onclick="saveCanvas()" style="background-color: #A7F3A1;">💾 Save</button>
+            </div>
+        </div>
+        
+        <button onclick="location.href='learninghub.html'" style="margin-top: 30px;">Back to Hub</button>
+    </div>
+
+    <script src="js/drawing.js"></script>
+</body>
+</html>
