@@ -43,27 +43,27 @@ function applyTheme(){
     switch(theme){
 
         case "jungle":
-            document.body.style.background =
+            document.body.style.backgroundColor =
             "#A7F3A1";
             break;
 
         case "space":
-            document.body.style.background =
+            document.body.style.backgroundColor =
             "#B8C0FF";
             break;
 
         case "ocean":
-            document.body.style.background =
+            document.body.style.backgroundColor =
             "#9EE7FF";
             break;
 
         case "fantasy":
-            document.body.style.background =
+            document.body.style.backgroundColor =
             "#FFD6EC";
             break;
 
         case "rainbow":
-            document.body.style.background =
+            document.body.style.backgroundColor =
             "#FFF0A6";
             break;
     }
