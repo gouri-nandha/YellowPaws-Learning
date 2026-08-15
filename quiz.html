@@ -1,58 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YellowPaws Quiz</title>
-
+    <title>Daily Quiz Time - YellowPaws</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <div class="quiz-container">
+    <div class="quiz-container" style="max-width: 600px;">
+        <h1>Today's Daily Quiz</h1>
+        <p id="quizProgress" style="font-weight:bold; color:#666; margin-bottom:15px;">Question 1 of 5</p>
 
-        <div style="display:flex; justify-content:space-between; align-items:center; width:100%; margin-bottom:15px;">
-            <h1 style="margin:0;">Quiz Time</h1>
-            <div style="background:#FFF0A6; padding:8px 16px; border-radius:20px; font-weight:bold; font-size:1.2rem; border:2px solid #FFD93D;">
-                Stars: <span id="starDisplay">0</span>
-            </div>
-        </div>
-
-        <div class="quiz-card">
-
-            <h2 id="question" style="margin-bottom:20px;">Loading Question...</h2>
-
-            <div id="answers" style="display:flex; flex-direction:column; gap:12px;"></div>
-
-            <p id="result" style="margin-top:20px; font-size:1.3rem; font-weight:bold; min-height:30px;"></p>
-
-        </div>
-
-        <div class="controls" style="gap: 10px; width: 100%;">
-            <button id="readAloudToggleBtn" onclick="toggleReadAloud()" style="background-color: #6BCBFF; color: white;">
+        <div style="margin-bottom:15px; display:flex; justify-content:center; gap:10px;">
+            <button id="readAloudToggleBtn" onclick="toggleReadAloud()" style="background:#e0e0e0; color:#333; width:auto; padding:6px 14px; font-size:0.9rem;">
                 Read Aloud: Off
             </button>
-            <button id="speakCurrentQuestionBtn" onclick="speakCurrentQuestion()" style="background-color: #4CAF50; color: white;">
+            <button onclick="speakQuestion()" style="background:#6BCBFF; color:#fff; width:auto; padding:6px 14px; font-size:0.9rem;">
                 Listen Question
             </button>
-            <button id="nextBtn" onclick="nextQuestion()">
-                Next Question
-            </button>
+        </div>
+
+        <div id="quizCard" class="quiz-card">
+            <h2 id="question" style="font-size:1.4rem; margin-bottom:20px; color:#2c3e50;">Loading question...</h2>
+            <div id="options" class="options-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:12px;"></div>
+        </div>
+
+        <div id="resultCard" class="quiz-card" style="display:none; text-align:center;">
+            <h2>Quiz Complete!</h2>
+            <h3 style="font-size:2rem; color:#2d6a4f; margin:15px 0;">Score: <span id="finalScore">0</span></h3>
+            <p style="font-size:1.2rem; font-weight:bold; color:#ffb703; margin-bottom:20px;">Reward: <span id="starsEarned">+0 Stars</span></p>
+            <button onclick="restartQuiz()" style="background:#52b788; color:white; width:100%; margin-bottom:10px;">Try Again</button>
+            <button onclick="location.href='learninghub.html'" style="width:100%;">Back to Hub</button>
         </div>
 
         <br>
-
-        <button onclick="location.href='learninghub.html'">
-            Back to Hub
-        </button>
-
+        <button onclick="location.href='learninghub.html'">Back to Hub</button>
     </div>
 
     <script src="js/storage.js"></script>
+    <script src="js/theme.js"></script>
     <script src="js/quiz.js"></script>
+    <script src="js/navbar.js"></script>
     <script src="js/timer.js"></script>
 </body>
-
 </html>

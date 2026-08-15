@@ -4,97 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parent Dashboard - YellowPaws</title>
-
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
-<!-- PIN Screen -->
-<div id="pinSection" class="parent-container">
+<!-- Parent Access Portal (PIN or Login/Registration) -->
+<div id="parentPortal" class="parent-container" style="max-width: 500px; margin-top: 40px;">
+    <img src="assets/mascot/yellowpaws_logo.png" onerror="this.src='assets/avatars/puppy.svg'" alt="YellowPaws Mascot" class="mascot-logo" style="width:110px; height:110px;">
+    
+    <h1 id="portalHeading">Parent Portal Access</h1>
 
-    <img src="assets/mascot/yellowpaws_logo.png" onerror="this.src='file:///C:/Users/gouri/.gemini/antigravity-ide/brain/c86b4cca-6a8a-4a8e-857e-dd3b5eb76b6b/yellowpaws_logo_1786774952499.png'" alt="YellowPaws Mascot" class="mascot-logo" style="width:110px; height:110px;">
+    <!-- Tabs -->
+    <div style="display:flex; gap:10px; margin: 15px 0; width:100%;">
+        <button id="tabPin" onclick="switchPortalMode('pin')" style="flex:1; background:#FFB703;">PIN Code</button>
+        <button id="tabParentAuth" onclick="switchPortalMode('auth')" style="flex:1; background:#e0e0e0;">Parent Account</button>
+    </div>
 
-    <h1>Parent Area</h1>
+    <!-- PIN Access Mode -->
+    <div id="pinModeDiv" style="width:100%; text-align:left;">
+        <label style="font-weight:bold; display:block; margin-bottom:6px;">Enter 4-Digit Parent PIN</label>
+        <input type="password" id="pinInput" placeholder="Default PIN: 1234" style="width:100%;">
+        <button onclick="verifyPin()" style="width:100%; margin-top:15px;">Verify PIN</button>
+    </div>
 
-    <input
-        type="password"
-        id="pinInput"
-        placeholder="Enter PIN (Default: 1234)"
-    >
+    <!-- Parent Auth Mode -->
+    <div id="authModeDiv" style="display:none; width:100%; text-align:left;">
+        <div style="display:flex; gap:10px; margin-bottom:12px;">
+            <button id="tabParentSubLogin" onclick="switchParentAuthTab('login')" style="flex:1; padding:6px; font-size:0.9rem; background:#FFB703;">Login</button>
+            <button id="tabParentSubRegister" onclick="switchParentAuthTab('register')" style="flex:1; padding:6px; font-size:0.9rem; background:#e0e0e0;">Register</button>
+        </div>
 
-    <button onclick="verifyPin()">
-        Access Dashboard
-    </button>
+        <label style="font-weight:bold; display:block; margin:8px 0 4px 0;">Parent Email / Username</label>
+        <input type="text" id="parentUser" placeholder="Enter email or username" style="width:100%;">
 
-    <p id="pinMessage"></p>
+        <label style="font-weight:bold; display:block; margin:12px 0 4px 0;">Password</label>
+        <input type="password" id="parentPass" placeholder="Enter password" style="width:100%;">
 
+        <div id="parentConfirmPassDiv" style="display:none;">
+            <label style="font-weight:bold; display:block; margin:12px 0 4px 0;">Confirm Password</label>
+            <input type="password" id="parentConfirmPass" placeholder="Confirm password" style="width:100%;">
+        </div>
+
+        <button onclick="handleParentAuthSubmit()" id="parentAuthSubmitBtn" style="width:100%; margin-top:18px;">Login & Continue</button>
+    </div>
+
+    <p id="portalMessage" style="margin-top:12px; font-weight:bold; text-align:center;"></p>
+    <button onclick="location.href='learninghub.html'" style="background-color:#e0e0e0; margin-top:10px; width:100%;">Back to Hub</button>
 </div>
 
-<!-- Dashboard -->
-<div
-    id="dashboard"
-    class="parent-container"
-    style="display:none;"
->
-
+<!-- Parent Dashboard Screen -->
+<div id="dashboard" class="parent-container" style="display:none; max-width:750px; margin-top: 30px;">
     <h1>Parent Dashboard</h1>
 
+    <!-- Child Profile Card -->
     <div class="dashboard-card" style="display:flex; flex-direction:column; align-items:center;">
-        <h2>Child Info</h2>
+        <h2>Child Information</h2>
         <div id="childAvatarContainer" style="margin: 8px 0;"></div>
         <p><strong>Nickname:</strong> <span id="childNickname">Unknown</span></p>
         <p><strong>Current Rank:</strong> <span id="childRank">Beginner</span></p>
+        <p><strong>Total Stars:</strong> <span id="totalStars" style="font-weight:bold; color:#FFD700;">0</span></p>
+        <p><strong>Streak Count:</strong> <span id="childStreak" style="font-weight:bold; color:#ff6b6b;">0 Days</span></p>
     </div>
 
-    <div class="dashboard-card">
-        <h2>Stars Earned</h2>
-        <p id="totalStars" style="font-size:2rem; font-weight:bold; color:#FFD700;">0</p>
+    <!-- Dynamic Learning History Activity Log -->
+    <div class="dashboard-card" style="text-align:left;">
+        <h2>Learning History Log</h2>
+        <div id="historyLogList" style="max-height: 180px; overflow-y: auto; padding:8px; background:#f8f9fa; border-radius:12px; border:2px solid #eee; margin-top:10px;">
+            <p style="color:#777; font-style:italic;">No learning history recorded yet.</p>
+        </div>
     </div>
 
+    <!-- Chart Analytics -->
     <div class="dashboard-card">
-        <h2>Progress Chart</h2>
-        <canvas id="progressChart" width="400" height="200"></canvas>
+        <h2>Learning Performance Analytics</h2>
+        <div style="max-width:550px; margin: 15px auto;">
+            <canvas id="progressChart" width="450" height="240"></canvas>
+        </div>
     </div>
 
+    <!-- Screen Time limits -->
     <div class="dashboard-card">
-        <h2>Quizzes Completed</h2>
-        <p id="quizCount" style="font-size:1.8rem; font-weight:bold;">0</p>
-    </div>
-
-    <div class="dashboard-card">
-        <h2>Screen Time Limit</h2>
-        <select id="timeLimit">
+        <h2>Screen Time Limits</h2>
+        <select id="timeLimit" style="width:100%; padding:10px;">
             <option value="15">15 Minutes</option>
             <option value="30">30 Minutes</option>
             <option value="60">1 Hour</option>
             <option value="120">2 Hours</option>
         </select>
         <br><br>
-        <button onclick="saveTimeLimit()">Save Limit</button>
+        <button onclick="saveTimeLimit()" style="width:100%;">Save Screen Time Limit</button>
     </div>
 
-    <div class="dashboard-card">
-        <h2>Time Used</h2>
-        <p id="timeUsed">0 Minutes</p>
-    </div>
-
+    <!-- Settings Controls -->
     <div class="dashboard-card">
         <h2>Dashboard Controls</h2>
-        <button onclick="resetStars()">Reset Stars</button>
-        <button onclick="exportReport()">Export Report (PDF)</button>
-        <button onclick="resetProgress()" style="background-color:#ff6b6b; color:white;">Reset All Progress</button>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+            <button onclick="resetStars()">Reset Stars</button>
+            <button onclick="exportReport()">Export PDF Report</button>
+            <button onclick="resetProgress()" style="background-color:#ff6b6b; color:white; grid-column:span 2;">Reset All Progress</button>
+        </div>
     </div>
-    
-    <button onclick="location.href='learninghub.html'">Back to Hub</button>
 
+    <button onclick="location.href='learninghub.html'" style="margin-top:15px; width:100%;">Back to Hub</button>
 </div>
 
 <script src="js/icons.js"></script>
 <script src="js/storage.js"></script>
 <script src="js/theme.js"></script>
 <script src="js/parent.js"></script>
+<script src="js/navbar.js"></script>
 
 </body>
 </html>

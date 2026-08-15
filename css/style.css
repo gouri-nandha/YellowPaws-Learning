@@ -626,3 +626,71 @@ select:focus {
     display: inline-block;
     filter: grayscale(40%);
 }
+
+/* GLOBAL NAVBAR STYLING */
+.yp-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid #FFD93D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 24px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    box-sizing: border-box;
+}
+.yp-nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.yp-nav-logo {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.yp-nav-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #FFB703;
+    text-shadow: 1px 1px 0px #e76f51;
+}
+.yp-nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.yp-nav-item {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #2c3e50;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+.yp-nav-item:hover {
+    background: #FFB703;
+    color: #fff;
+}
+.yp-nav-btn {
+    background: #ff4d6d !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 6px 16px !important;
+    font-size: 0.9rem !important;
+    border-radius: 20px !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    width: auto !important;
+}
+.yp-nav-btn:hover {
+    background: #d90429 !important;
+}

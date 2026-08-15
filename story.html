@@ -3,52 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moral Story Time - YellowPaws</title>
+    <title>Moral Stories - YellowPaws</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="hub-container">
-        
-        <!-- Story Selection Library View -->
-        <div id="storyLibraryView" style="width: 100%;">
-            <h1>Moral Story Library</h1>
-            <p style="margin-bottom: 20px;">Choose a moral story to read beautiful illustrated tales and earn stars!</p>
 
-            <div class="subject-grid" id="storyGrid">
-                <!-- Moral story cards rendered dynamically -->
-            </div>
+    <div class="learn-container" style="max-width: 680px;">
+        <h1 id="storyTitle">Moral Stories</h1>
 
-            <br>
-            <button onclick="location.href='learninghub.html'">Back to Hub</button>
+        <div style="margin: 15px 0;">
+            <label style="font-weight:bold; margin-right:8px;">Choose Story:</label>
+            <select id="storySelect" onchange="selectStory(this.value)" style="padding:8px 14px; font-size:1rem;">
+            </select>
         </div>
 
-        <!-- Story Reader View -->
-        <div id="storyReaderView" style="display: none; width: 100%;">
-            <h1 id="storyTitle">Loading Story...</h1>
+        <div class="story-illustration-container" style="margin: 15px auto;">
+            <img id="storyImage" src="assets/images/stories/tortoise_hare.png" alt="Story Illustration" class="story-illustration">
+        </div>
 
-            <div class="profile-card" style="max-width: 650px; margin: 15px auto; padding: 25px;">
-                <img id="storyIllustration" src="" alt="Story Illustration" class="story-image-card">
+        <div class="story-card" style="padding: 22px 20px; min-height: 140px;">
+            <p id="storyText" style="font-size: 1.25rem; font-weight: 600; line-height: 1.5; color: #2c3e50;">
+                Loading story...
+            </p>
 
-                <p id="storyText" style="font-size: 1.4rem; line-height: 1.6; margin: 20px 0; font-weight: 600; color: #2c3e50;">
-                    Please wait...
-                </p>
-
-                <div id="pageNumberDisplay" style="font-weight: bold; color: #777; margin-bottom: 15px;"></div>
-
-                <div class="controls" style="gap: 10px;">
-                    <button onclick="previousPage()" style="background-color: #e0e0e0;">Prev</button>
-                    <button onclick="readAloud()" style="background-color: #6BCBFF; color: white;">Read Aloud</button>
-                    <button onclick="nextPage()" style="background-color: #FFB703;">Next</button>
+            <!-- Story End Completion Card -->
+            <div id="storyEndCard" style="display:none; text-align:center; padding:10px 5px;">
+                <h2 style="color:#2d6a4f; margin-bottom:8px;">Story Completed!</h2>
+                <div style="background:#e8f5e9; border:2px solid #52b788; border-radius:14px; padding:14px; margin:10px 0;">
+                    <h3 style="color:#1b4332; margin-bottom:5px;">Moral Learned:</h3>
+                    <p id="storyMoral" style="font-size:1.2rem; font-weight:bold; color:#2d6a4f;"></p>
                 </div>
+                <div style="background:#fff9c4; border:2px solid #ffb703; border-radius:14px; padding:10px; margin-bottom:15px;">
+                    <span style="font-size:1.1rem; font-weight:bold; color:#b78103;">Reward Claimed: +5 Bonus Stars!</span>
+                </div>
+                <button onclick="claimStoryReward()" style="background:#52b788; color:white; font-size:1.1rem; width:100%;">
+                    Claim Reward & Continue
+                </button>
             </div>
-
-            <button onclick="backToLibrary()" style="margin-top: 15px;">Back to Story Library</button>
         </div>
 
+        <p id="storyProgress" style="font-weight:bold; color:#777; margin-top:10px;">Slide 1 of 5</p>
+
+        <div class="controls" style="margin-top: 15px; display:flex; justify-content:center; gap:10px;">
+            <button onclick="prevSlide()">Previous</button>
+            <button onclick="speakSlide()">Read Aloud</button>
+            <button onclick="nextSlide()">Next</button>
+        </div>
+
+        <br>
+        <button onclick="location.href='learninghub.html'">Back to Hub</button>
     </div>
-    
+
     <script src="js/storage.js"></script>
+    <script src="js/theme.js"></script>
     <script src="js/story.js"></script>
+    <script src="js/navbar.js"></script>
     <script src="js/timer.js"></script>
 </body>
 </html>

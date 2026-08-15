@@ -23,6 +23,7 @@ const YellowPawsStorage = {
             if (!res.ok) {
                 throw new Error(data.error || "Registration failed");
             }
+            if (!data.profile.learningHistory) data.profile.learningHistory = [];
             this.setLocalProfile(data.profile);
             return data;
         } catch (err) {
@@ -33,7 +34,8 @@ const YellowPawsStorage = {
                 avatar: avatar || "Puppy",
                 stars: 0,
                 quizCount: 0,
-                streak: 1
+                streak: 1,
+                learningHistory: []
             };
             this.setLocalProfile(profile);
             return { profile, message: "Registered locally" };
@@ -52,12 +54,14 @@ const YellowPawsStorage = {
             if (!res.ok) {
                 throw new Error(data.error || "Login failed");
             }
+            if (!data.profile.learningHistory) data.profile.learningHistory = [];
             this.setLocalProfile(data.profile);
             return data;
         } catch (err) {
             console.warn("Backend unavailable, logging in locally:", err.message);
             const local = this.getProfile();
             if (local && (local.username === username || local.nickname === username)) {
+                if (!local.learningHistory) local.learningHistory = [];
                 return { profile: local, message: "Logged in locally" };
             }
             throw err;
@@ -74,7 +78,7 @@ const YellowPawsStorage = {
     },
 
     async updateProfile(updates) {
-        let current = this.getProfile() || { stars: 0, quizCount: 0, streak: 1, nickname: "Friend", avatar: "Puppy" };
+        let current = this.getProfile() || { stars: 0, quizCount: 0, streak: 1, nickname: "Friend", avatar: "Puppy", learningHistory: [] };
         const updated = { ...current, ...updates };
         this.setLocalProfile(updated);
 
@@ -91,7 +95,7 @@ const YellowPawsStorage = {
     },
 
     async claimReward(rewardStars, dateStr) {
-        let profile = this.getProfile() || { stars: 0 };
+        let profile = this.getProfile() || { stars: 0, learningHistory: [] };
         profile.stars = (profile.stars || 0) + rewardStars;
         this.setLocalProfile(profile);
         localStorage.setItem("challengeCompleted", "true");
@@ -105,12 +109,35 @@ const YellowPawsStorage = {
             });
             const data = await res.json();
             if (data.profile) {
+                if (!data.profile.learningHistory) data.profile.learningHistory = [];
                 this.setLocalProfile(data.profile);
             }
         } catch (err) {
             console.warn("Backend reward claim synced locally:", err.message);
         }
         return profile;
+    },
+
+    addHistory(activity) {
+        let profile = this.getProfile();
+        if (!profile) return;
+        if (!profile.learningHistory) profile.learningHistory = [];
+        
+        const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const logEntry = `${activity} - ${timestamp}`;
+        
+        // Prevent duplicate consecutive entries
+        if (profile.learningHistory.length > 0 && profile.learningHistory[0] === logEntry) {
+            return;
+        }
+
+        profile.learningHistory.unshift(logEntry);
+        // Keep last 30 activities
+        if (profile.learningHistory.length > 30) {
+            profile.learningHistory.pop();
+        }
+
+        this.updateProfile({ learningHistory: profile.learningHistory });
     }
 };
 

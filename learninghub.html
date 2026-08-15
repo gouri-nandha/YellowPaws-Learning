@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YellowPaws Learning Hub</title>
-
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -13,21 +12,21 @@
 
     <div class="hub-container">
 
-        <div class="profile-card" style="display:flex; flex-direction:column; align-items:center;">
-            <img src="assets/mascot/yellowpaws_logo.png" onerror="this.src='file:///C:/Users/gouri/.gemini/antigravity-ide/brain/c86b4cca-6a8a-4a8e-857e-dd3b5eb76b6b/yellowpaws_logo_1786774952499.png'" alt="YellowPaws Mascot" class="mascot-logo" style="width:110px; height:110px; margin-bottom:10px;">
-            <div id="avatarContainer" style="margin: 5px 0;"></div>
-            <h2><span id="nickname">Friend</span></h2>
-            <h3>Total Stars: <span id="stars">0</span></h3>
-            <h4>Current Rank: <span id="rankTitle">Beginner</span></h4>
-            <h4 style="color:#ff6b6b; margin-top:10px;">Streak: <span id="streakCount">0</span> Days</h4>
+        <!-- User details cleanly grouped -->
+        <div class="profile-card" style="display:flex; flex-direction:column; align-items:center; padding:20px;">
+            <div id="avatarContainer" style="margin-bottom: 12px;"></div>
+            <h2 style="font-size:1.8rem; font-weight:800; color:#333; margin-bottom:5px;"><span id="nickname">Friend</span></h2>
+            <h3 style="color:#FFB703; font-weight:700; margin-bottom:4px;">Total Stars: <span id="stars">0</span></h3>
+            <h4 style="color:#52b788; font-weight:600; margin-bottom:4px;">Rank: <span id="rankTitle">Beginner</span></h4>
+            <h4 style="color:#ff6b6b; font-weight:600;">Current Streak: <span id="streakCount">0</span> Days</h4>
         </div>
 
-        <div class="challenge-card" onclick="location.href='dailychallenge.html'" style="cursor:pointer;">
+        <div class="challenge-card" onclick="location.href='dailychallenge.html'" style="cursor:pointer; margin-top:20px;">
             <h2 id="dailyChallenge">Daily Challenge</h2>
             <p>Complete learning modules to earn bonus stars!</p>
         </div>
 
-        <h2>Learning Modules</h2>
+        <h2 style="margin-top: 25px; font-weight: 800;">Learning Modules</h2>
 
         <div class="subject-grid">
 
@@ -85,30 +84,13 @@
 
         </div>
 
-        <br>
-
-        <button onclick="location.href='theme.html'">
-            Area Themes
-        </button>
-
-        <button onclick="location.href='settings.html'">
-            Settings
-        </button>
-
-        <button onclick="location.href='parent.html'">
-            Parent Dashboard
-        </button>
-
-        <button onclick="logout()">
-            Logout
-        </button>
-
     </div>
 
     <script src="js/icons.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/learninghub.js"></script>
+    <script src="js/navbar.js"></script>
     <script src="js/timer.js"></script>
 
 </body>

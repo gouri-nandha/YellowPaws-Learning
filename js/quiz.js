@@ -1,187 +1,153 @@
-const questionElement = document.getElementById("question");
-const resultMessage = document.getElementById("result");
-const starDisplay = document.getElementById("starDisplay");
-
-let profile = (window.YellowPawsStorage && window.YellowPawsStorage.getProfile()) || JSON.parse(localStorage.getItem("yellowPawsProfile")) || { stars: 0, quizCount: 0 };
-let stars = profile.stars || 0;
-let readAloudOn = localStorage.getItem("readAloudOn") === "true"; // Defaults to false
-
-if (starDisplay) {
-    starDisplay.textContent = stars;
-}
-
-const quizData = [
-    {
-        question: "Which letter is for Apple?",
-        answers: ["A", "B", "C"],
-        correct: "A"
-    },
-    {
-        question: "Which animal says Woof?",
-        answers: ["Dog", "Cat", "Lion"],
-        correct: "Dog"
-    },
-    {
-        question: "What comes after 4?",
-        answers: ["5", "6", "3"],
-        correct: "5"
-    },
-    {
-        question: "Which color is the sky?",
-        answers: ["Blue", "Red", "Green"],
-        correct: "Blue"
-    },
-    {
-        question: "Which shape has 3 corners?",
-        answers: ["Triangle", "Circle", "Square"],
-        correct: "Triangle"
-    },
-    {
-        question: "Which animal is the biggest?",
-        answers: ["Elephant", "Rabbit", "Cat"],
-        correct: "Elephant"
-    },
-    {
-        question: "What does a cat say?",
-        answers: ["Meow", "Woof", "Roar"],
-        correct: "Meow"
-    }
+const allQuizPool = [
+    { question: "What letter does Apple start with?", options: ["B", "A", "C", "D"], correct: 1 },
+    { question: "How many legs does a dog have?", options: ["2", "4", "6", "8"], correct: 1 },
+    { question: "What color is a banana?", options: ["Red", "Blue", "Yellow", "Green"], correct: 2 },
+    { question: "What shape has 3 sides?", options: ["Square", "Circle", "Triangle", "Star"], correct: 2 },
+    { question: "Which animal says 'Meow'?", options: ["Dog", "Cat", "Lion", "Elephant"], correct: 1 },
+    { question: "What is the moral of The Tortoise & The Hare?", options: ["Be fast", "Slow and steady wins", "Always sleep", "Never run"], correct: 1 },
+    { question: "Which letter comes after B?", options: ["A", "D", "C", "E"], correct: 2 },
+    { question: "What shape is a ball?", options: ["Cube", "Circle / Sphere", "Square", "Triangle"], correct: 1 },
+    { question: "What color is the sky on a sunny day?", options: ["Green", "Blue", "Yellow", "Purple"], correct: 1 },
+    { question: "Which animal is known as the King of the Jungle?", options: ["Tiger", "Monkey", "Lion", "Rabbit"], correct: 2 },
+    { question: "What is 2 + 2?", options: ["3", "4", "5", "6"], correct: 1 },
+    { question: "What color do you get when you mix Red and Yellow?", options: ["Green", "Purple", "Orange", "Blue"], correct: 2 },
+    { question: "Which letter comes before Z?", options: ["X", "Y", "W", "V"], correct: 1 },
+    { question: "What shape has 4 equal sides?", options: ["Rectangle", "Square", "Triangle", "Oval"], correct: 1 },
+    { question: "What was the moral of The Honest Woodcutter?", options: ["Honesty is the best policy", "Keep gold", "Never work", "Cut trees"], correct: 0 }
 ];
 
-let currentQuestion = 0;
+let dailyQuestions = [];
+let currentQuizIndex = 0;
 let score = 0;
+let isReadAloudEnabled = false;
 
-function updateReadAloudUI() {
-    const btn = document.getElementById("readAloudToggleBtn");
-    if (btn) {
-        btn.textContent = `Read Aloud: ${readAloudOn ? "On" : "Off"}`;
+function generateDailyQuiz() {
+    const dateStr = new Date().toDateString();
+    // Simple hash function for date seed
+    let seed = 0;
+    for (let i = 0; i < dateStr.length; i++) {
+        seed = (seed << 5) - seed + dateStr.charCodeAt(i);
+        seed |= 0;
     }
-}
-
-function toggleReadAloud() {
-    readAloudOn = !readAloudOn;
-    localStorage.setItem("readAloudOn", readAloudOn);
-    updateReadAloudUI();
-}
-
-function speak(text) {
-    if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.rate = 1.0;
-        window.speechSynthesis.speak(utterance);
-    }
-}
-
-function speakCurrentQuestion() {
-    if (currentQuestion < quizData.length) {
-        speak(quizData[currentQuestion].question);
+    
+    // Pick 5 deterministic questions for today
+    const poolCopy = [...allQuizPool];
+    dailyQuestions = [];
+    for (let i = 0; i < 5; i++) {
+        const index = Math.abs(seed + i * 7) % poolCopy.length;
+        dailyQuestions.push(poolCopy[index]);
+        poolCopy.splice(index, 1);
     }
 }
 
 function loadQuestion() {
-    if (currentQuestion >= quizData.length) {
-        finishQuiz();
-        return;
-    }
+    if (dailyQuestions.length === 0) generateDailyQuiz();
 
-    if (resultMessage) resultMessage.textContent = "";
+    const q = dailyQuestions[currentQuizIndex];
+    document.getElementById("quizProgress").textContent = `Question ${currentQuizIndex + 1} of ${dailyQuestions.length}`;
+    document.getElementById("question").textContent = q.question;
 
-    const q = quizData[currentQuestion];
-    if (questionElement) questionElement.textContent = q.question;
+    const optionsContainer = document.getElementById("options");
+    optionsContainer.innerHTML = "";
 
-    // Only speak automatically if Read Aloud setting was explicitly turned ON by user
-    if (readAloudOn) {
-        speak(q.question);
-    }
-
-    const answersDiv = document.getElementById("answers");
-    if (!answersDiv) return;
-
-    answersDiv.innerHTML = "";
-
-    q.answers.forEach(answer => {
-        const button = document.createElement("button");
-        button.className = "answer-btn";
-        button.style.fontSize = "1.2rem";
-        button.style.padding = "15px";
-        button.style.margin = "5px 0";
-        button.textContent = answer;
-
-        button.onclick = () => checkAnswer(answer, button);
-
-        answersDiv.appendChild(button);
+    q.options.forEach((opt, idx) => {
+        const btn = document.createElement("button");
+        btn.textContent = opt;
+        btn.onclick = () => selectAnswer(idx);
+        optionsContainer.appendChild(btn);
     });
 
-    const nextBtn = document.getElementById("nextBtn");
-    if (nextBtn) nextBtn.style.display = "inline-block";
-}
-
-function checkAnswer(selected, selectedBtn) {
-    const q = quizData[currentQuestion];
-    const result = document.getElementById("result");
-
-    const allButtons = document.querySelectorAll(".answer-btn");
-    allButtons.forEach(btn => btn.disabled = true);
-
-    if (selected === q.correct) {
-        if (result) {
-            result.textContent = "Correct! +5 Stars!";
-            result.style.color = "#2b9348";
-        }
-        selectedBtn.style.backgroundColor = "#A7F3A1";
-        selectedBtn.style.borderColor = "#2b9348";
-        score += 5;
-        if (readAloudOn) speak("Correct! Great job!");
-    } else {
-        if (result) {
-            result.textContent = `Oops! Correct answer was: ${q.correct}`;
-            result.style.color = "#e63946";
-        }
-        selectedBtn.style.backgroundColor = "#ffb7b2";
-        selectedBtn.style.borderColor = "#e63946";
-        if (readAloudOn) speak(`Oops! The correct answer was ${q.correct}`);
+    if (isReadAloudEnabled) {
+        speakQuestion();
     }
 }
 
-function nextQuestion() {
-    currentQuestion++;
+function toggleReadAloud() {
+    isReadAloudEnabled = !isReadAloudEnabled;
+    const btn = document.getElementById("readAloudToggleBtn");
+    if (btn) {
+        btn.textContent = `Read Aloud: ${isReadAloudEnabled ? 'On' : 'Off'}`;
+        btn.style.backgroundColor = isReadAloudEnabled ? '#52b788' : '#e0e0e0';
+        btn.style.color = isReadAloudEnabled ? '#ffffff' : '#333333';
+    }
+    if (isReadAloudEnabled) {
+        speakQuestion();
+    }
+}
+
+function speakQuestion() {
+    const q = dailyQuestions[currentQuizIndex];
+    if (!q) return;
+    const text = `${q.question}. Options are: ${q.options.join(", ")}`;
+    const utterance = new SpeechSynthesisUtterance(text);
+    speechSynthesis.speak(utterance);
+}
+
+function selectAnswer(selectedIndex) {
+    const q = dailyQuestions[currentQuizIndex];
+    const optionsContainer = document.getElementById("options");
+    const buttons = optionsContainer.querySelectorAll("button");
+
+    buttons.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === q.correct) {
+            btn.style.backgroundColor = "#52b788";
+            btn.style.color = "#ffffff";
+        } else if (idx === selectedIndex) {
+            btn.style.backgroundColor = "#ff4d6d";
+            btn.style.color = "#ffffff";
+        }
+    });
+
+    if (selectedIndex === q.correct) {
+        score++;
+    }
+
+    setTimeout(() => {
+        currentQuizIndex++;
+        if (currentQuizIndex < dailyQuestions.length) {
+            loadQuestion();
+        } else {
+            showQuizResults();
+        }
+    }, 1200);
+}
+
+function showQuizResults() {
+    document.getElementById("quizCard").style.display = "none";
+    const resultCard = document.getElementById("resultCard");
+    resultCard.style.display = "block";
+
+    document.getElementById("finalScore").textContent = `${score} / ${dailyQuestions.length}`;
+    
+    // Add stars
+    const earnedStars = score * 2;
+    document.getElementById("starsEarned").textContent = `+${earnedStars} Stars!`;
+
+    let profile = (window.YellowPawsStorage && window.YellowPawsStorage.getProfile()) || JSON.parse(localStorage.getItem("yellowPawsProfile")) || {stars: 0};
+    const newStars = (profile.stars || 0) + earnedStars;
+    const quizCount = (profile.quizCount || profile.quiz_count || 0) + 1;
+
+    if (window.YellowPawsStorage) {
+        window.YellowPawsStorage.updateProfile({ stars: newStars, quiz_count: quizCount });
+        window.YellowPawsStorage.addHistory(`Completed Daily Quiz (${score}/${dailyQuestions.length})`);
+    } else {
+        profile.stars = newStars;
+        profile.quizCount = quizCount;
+        localStorage.setItem("yellowPawsProfile", JSON.stringify(profile));
+    }
+}
+
+function restartQuiz() {
+    currentQuizIndex = 0;
+    score = 0;
+    generateDailyQuiz();
+    document.getElementById("quizCard").style.display = "block";
+    document.getElementById("resultCard").style.display = "none";
     loadQuestion();
 }
 
-function finishQuiz() {
-    let currentProf = (window.YellowPawsStorage && window.YellowPawsStorage.getProfile()) || JSON.parse(localStorage.getItem("yellowPawsProfile")) || { stars: 0, quizCount: 0 };
-    const updatedStars = (currentProf.stars || 0) + score;
-    const updatedQuizCount = (currentProf.quizCount || 0) + 1;
-
-    if (window.YellowPawsStorage) {
-        window.YellowPawsStorage.updateProfile({ stars: updatedStars, quizCount: updatedQuizCount });
-    } else {
-        currentProf.stars = updatedStars;
-        currentProf.quizCount = updatedQuizCount;
-        localStorage.setItem("yellowPawsProfile", JSON.stringify(currentProf));
-    }
-
-    if (starDisplay) {
-        starDisplay.textContent = updatedStars;
-    }
-
-    const quizCard = document.querySelector(".quiz-card");
-    if (quizCard) {
-        quizCard.innerHTML = `
-            <h2>Quiz Complete!</h2>
-            <p style="font-size:1.4rem; margin:15px 0;">You earned <strong>${score} Stars</strong>!</p>
-            <h3>Keep up the awesome learning!</h3>
-        `;
-    }
-
-    const nextBtn = document.getElementById("nextBtn");
-    if (nextBtn) nextBtn.style.display = "none";
-
-    if (readAloudOn) speak(`Quiz complete! You earned ${score} stars!`);
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-    updateReadAloudUI();
+    generateDailyQuiz();
     loadQuestion();
 });
