@@ -13,17 +13,17 @@
 
     <div class="alphabet-container">
 
-        <h1>🐶 Learn the Alphabet</h1>
+        <h1>Learn the Alphabet</h1>
 
         <div class="alphabet-card">
 
-            <h2 id="letter">A</h2>
+            <h2 id="letter" style="font-size:4rem; color:#FFB703;">A</h2>
 
-            <div id="emoji" class="emoji">
-                🍎
+            <div id="badgeTag" class="emoji" style="font-size:2rem; font-weight:bold; color:#2c3e50; margin:15px 0;">
+                [Apple]
             </div>
 
-            <h3 id="word">
+            <h3 id="word" style="font-size:1.8rem;">
                 A for Apple
             </h3>
 
@@ -32,19 +32,19 @@
         <div class="controls">
 
             <button onclick="previousLetter()">
-                ⬅ Previous
+                Previous
             </button>
 
             <button onclick="speakLetter()">
-                🔊 Speak
+                Speak
             </button>
 
             <button onclick="testPronunciation()" style="background-color: #6BCBFF;">
-                🎤 Pronounce
+                Pronounce
             </button>
 
             <button onclick="nextLetter()">
-                Next ➡
+                Next
             </button>
 
         </div>
@@ -52,11 +52,12 @@
         <br>
 
         <button onclick="location.href='learninghub.html'">
-            🏠 Back to Hub
+            Back to Hub
         </button>
 
     </div>
 
+    <script src="js/storage.js"></script>
     <script src="js/speech.js"></script>
     <script src="js/alphabet.js"></script>
     <script src="js/timer.js"></script>

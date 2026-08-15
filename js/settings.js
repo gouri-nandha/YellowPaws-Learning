@@ -21,6 +21,9 @@ function updateBtnUI(key, label) {
 
 function resetApp() {
     if (confirm("Are you sure you want to reset everything? This will delete the profile and all progress!")) {
+        if (window.YellowPawsStorage) {
+            window.YellowPawsStorage.logout();
+        }
         localStorage.clear();
         alert("App has been reset.");
         window.location.href = "index.html";

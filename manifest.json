@@ -2,7 +2,7 @@
     "name": "YellowPaws Learning",
     "short_name": "YellowPaws",
     "description": "A fun and interactive learning app for kids!",
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#FFD93D",
     "theme_color": "#FFD93D",

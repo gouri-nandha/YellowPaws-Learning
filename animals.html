@@ -13,12 +13,12 @@
 
     <div class="animals-container">
 
-        <h1>🐶 Learn Animals</h1>
+        <h1>Learn Animals</h1>
 
         <div class="animal-card">
 
-            <div id="animalEmoji" class="animal-emoji">
-                🐶
+            <div id="animalEmoji" class="animal-emoji" style="font-size:2rem; font-weight:bold; color:#FFB703; margin:20px 0;">
+                [Dog]
             </div>
 
             <h2 id="animalName">
@@ -30,23 +30,23 @@
         <div class="controls">
 
             <button onclick="previousAnimal()">
-                ⬅ Previous
+                Previous
             </button>
 
             <button onclick="speakAnimal()">
-                🔊 Speak
+                Speak
             </button>
 
             <button onclick="testPronunciation()" style="background-color: #6BCBFF;">
-                🎤 Pronounce
+                Pronounce
             </button>
 
             <button onclick="playAnimalSound()">
-                🎵 Sound
+                Sound
             </button>
 
             <button onclick="nextAnimal()">
-                Next ➡
+                Next
             </button>
 
         </div>
@@ -54,11 +54,12 @@
         <br>
 
         <button onclick="location.href='learninghub.html'">
-            🏠 Back to Hub
+            Back to Hub
         </button>
 
     </div>
 
+    <script src="js/storage.js"></script>
     <script src="js/speech.js"></script>
     <script src="js/animals.js"></script>
     <script src="js/timer.js"></script>

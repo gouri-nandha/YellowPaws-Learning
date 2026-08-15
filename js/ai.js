@@ -7,7 +7,7 @@ function askQuestion() {
     
     // Add user question
     const userMsg = document.createElement("p");
-    userMsg.innerHTML = `<strong>👦 You:</strong> ${question}`;
+    userMsg.innerHTML = `<strong>You:</strong> ${question}`;
     chatLog.appendChild(userMsg);
     
     inputField.value = "";
@@ -25,18 +25,18 @@ function askQuestion() {
         const isEducational = educationalKeywords.some(kw => qLower.includes(kw));
 
         if (!isEducational) {
-            response = "Hmm, I don't know much about that! 🐶 I am YellowPaws, and I only teach about animals, colors, shapes, numbers, and letters. Please ask me something about what we are learning!";
+            response = "Hmm, I don't know much about that! I am YellowPaws, and I only teach about animals, colors, shapes, numbers, and letters. Please ask me something about what we are learning!";
         } else if (qLower.includes("lion")) {
-            response = "A lion is a big wild cat, known as the king of the jungle! 🦁";
+            response = "A lion is a big wild cat, known as the king of the jungle!";
         } else if (qLower.includes("sky") && qLower.includes("blue")) {
-            response = "The sky is blue because sunlight scatters in the atmosphere, and blue light scatters the most! ☀️🔵";
+            response = "The sky is blue because sunlight scatters in the atmosphere, and blue light scatters the most!";
         } else if (qLower.includes("dog")) {
-            response = "Dogs are very friendly animals and are known as man's best friend! 🐶";
+            response = "Dogs are very friendly animals and are known as man's best friend!";
         } else if (qLower.includes("cat")) {
-            response = "Cats are cute, fluffy animals that love to sleep and say 'Meow'! 🐱";
+            response = "Cats are cute, fluffy animals that love to sleep and say 'Meow'!";
         }
         
-        aiMsg.innerHTML = `<strong>🤖 AI Tutor:</strong> ${response}`;
+        aiMsg.innerHTML = `<strong>AI Tutor:</strong> ${response}`;
         chatLog.appendChild(aiMsg);
         chatLog.scrollTop = chatLog.scrollHeight;
     }, 1000);

@@ -1,56 +1,43 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Challenges</title>
-
-```
-<link rel="stylesheet" href="css/style.css">
-```
-
+    <title>Daily Challenges - YellowPaws</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-```
-<div class="challenge-container">
+    <div class="challenge-container">
 
-    <h1>⭐ Daily Challenge</h1>
+        <h1>Daily Challenge</h1>
 
-    <div class="challenge-card">
+        <div class="challenge-card">
 
-        <h2 id="challengeTitle">
-            Loading Challenge...
-        </h2>
+            <h2 id="challengeTitle">Loading Challenge...</h2>
+            <p id="challengeDescription"></p>
 
-        <p id="challengeDescription"></p>
+            <p style="font-size:1.3rem; margin: 15px 0;">
+                Reward: <strong id="rewardText" style="color:#FFB703;">0 Stars</strong>
+            </p>
 
-        <p>
-            Reward:
-            <strong id="rewardText"></strong>
-        </p>
+            <button id="claimButton" onclick="claimReward()">
+                Claim Reward
+            </button>
 
-        <button
-            id="claimButton"
-            onclick="claimReward()"
-        >
-            Claim Reward
+            <p id="challengeStatus" style="margin-top:15px; font-weight:bold;"></p>
+
+        </div>
+
+        <button onclick="goBack()">
+            Back to Learning Hub
         </button>
-
-        <p id="challengeStatus"></p>
 
     </div>
 
-    <button onclick="goBack()">
-        Back to Learning Hub
-    </button>
-
-</div>
-
-<script src="js/challenges.js"></script>
-<script src="js/timer.js"></script>
-```
+    <script src="js/storage.js"></script>
+    <script src="js/challenges.js"></script>
+    <script src="js/timer.js"></script>
 
 </body>
 </html>

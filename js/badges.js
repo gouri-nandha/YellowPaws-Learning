@@ -1,108 +1,58 @@
-const badgeGrid =
-    document.getElementById("badgeGrid");
-
-const badges =
-    JSON.parse(
-        localStorage.getItem("badges")
-    ) || [];
-
-if (badges.length === 0) {
-    badgeGrid.innerHTML =
-        "<h2>No badges earned yet!</h2>";
-
-
-}
-else {
-
-    badges.forEach(badge => {
-
-        const card =
-            document.createElement("div");
-
-        card.className =
-            "badge-card";
-
-        card.innerHTML =
-            `<h2>${badge}</h2>`;
-
-        badgeGrid.appendChild(card);
-
-    });
-
-}
-
 function goBack() {
-
-    window.location.href =
-        "learn.html";
-
-
+    window.location.href = "learninghub.html";
 }
 const badgeData = [
     {
         title: "First Quiz",
-        emoji: "🌟",
+        tag: "[Quiz Star]",
         stars: 5
     },
     {
         title: "Rising Learner",
-        emoji: "⭐",
+        tag: "[Rising Star]",
         stars: 25
     },
     {
         title: "Super Student",
-        emoji: "🏆",
+        tag: "[Super Student]",
         stars: 50
     },
     {
         title: "Learning Champion",
-        emoji: "🎓",
+        tag: "[Champion]",
         stars: 100
     },
     {
         title: "YellowPaws Hero",
-        emoji: "👑",
+        tag: "[Hero]",
         stars: 200
     }
 ];
 
-const profile =
-    JSON.parse(
-        localStorage.getItem(
-            "yellowPawsProfile"
-        )
-    );
+document.addEventListener("DOMContentLoaded", () => {
+    const profile = (window.YellowPawsStorage && window.YellowPawsStorage.getProfile()) || JSON.parse(localStorage.getItem("yellowPawsProfile"));
+    const totalStars = profile?.stars || 0;
+    const grid = document.getElementById("badgesGrid");
 
-const totalStars =
-    profile?.stars || 0;
+    if (grid) {
+        grid.innerHTML = "";
+        badgeData.forEach(badge => {
+            const unlocked = totalStars >= badge.stars;
 
-const grid =
-    document.getElementById("badgesGrid");
+            const card = document.createElement("div");
+            card.className = unlocked ? "badge-card unlocked" : "badge-card locked";
 
-badgeData.forEach(badge => {
+            card.innerHTML = `
+                <div class="badge-emoji" style="font-size:1.5rem; font-weight:bold; color:#FFB703;">
+                    ${unlocked ? badge.tag : "[Locked]"}
+                </div>
+                <h3 style="margin:8px 0;">${badge.title}</h3>
+                <p style="font-size:1rem; color:#666;">
+                    ${badge.stars} Stars Required
+                </p>
+            `;
 
-    const unlocked =
-        totalStars >= badge.stars;
-
-    const card =
-        document.createElement("div");
-
-    card.className =
-        unlocked
-            ? "badge-card unlocked"
-            : "badge-card locked";
-
-    card.innerHTML = `
-        <div class="badge-emoji">
-            ${unlocked ? badge.emoji : "🔒"}
-        </div>
-
-        <h3>${badge.title}</h3>
-
-        <p>
-            ${badge.stars} Stars Required
-        </p>
-    `;
-
-    grid.appendChild(card);
+            grid.appendChild(card);
+        });
+    }
 });

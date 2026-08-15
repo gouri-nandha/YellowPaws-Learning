@@ -14,92 +14,98 @@
     <div class="hub-container">
 
         <div class="profile-card">
-            <h1 id="avatar">🐶</h1>
-            <h2>👦 <span id="nickname">Friend</span></h2>
-            <h3>⭐ Total Stars: <span id="stars">0</span></h3>
-            <h4>🏅 Current Rank: <span id="rankTitle">Beginner</span></h4>
-            <h4 style="color:#ff6b6b; margin-top:10px;">🔥 Streak: <span id="streakCount">0</span> Days</h4>
+            <img src="assets/mascot/yellowpaws_logo.png" onerror="this.src='file:///C:/Users/gouri/.gemini/antigravity-ide/brain/c86b4cca-6a8a-4a8e-857e-dd3b5eb76b6b/yellowpaws_logo_1786774952499.png'" alt="YellowPaws Mascot" class="mascot-logo" style="width:110px; height:110px; margin-bottom:10px;">
+            <h2>Avatar: <span id="avatar">Puppy</span> | <span id="nickname">Friend</span></h2>
+            <h3>Total Stars: <span id="stars">0</span></h3>
+            <h4>Current Rank: <span id="rankTitle">Beginner</span></h4>
+            <h4 style="color:#ff6b6b; margin-top:10px;">Streak: <span id="streakCount">0</span> Days</h4>
         </div>
 
         <div class="challenge-card" onclick="location.href='dailychallenge.html'" style="cursor:pointer;">
-            <h2 id="dailyChallenge">🎯 Daily Challenge</h2>
+            <h2 id="dailyChallenge">Daily Challenge</h2>
             <p>Complete learning modules to earn bonus stars!</p>
         </div>
 
-        <h2>📚 Learning Modules</h2>
+        <h2>Learning Modules</h2>
 
         <div class="subject-grid">
 
             <div class="subject-card" onclick="location.href='alphabet.html'">
-                🔤 ABC Learning
+                ABC Learning
             </div>
 
             <div class="subject-card" onclick="location.href='numbers.html'">
-                🔢 Numbers
+                Numbers
             </div>
 
             <div class="subject-card" onclick="location.href='colors.html'">
-                🎨 Colors
+                Colors
             </div>
 
             <div class="subject-card" onclick="location.href='shapes.html'">
-                🔷 Shapes
+                Shapes
             </div>
 
             <div class="subject-card" onclick="location.href='animals.html'">
-                🐶 Animals
+                Animals
             </div>
 
             <div class="subject-card" onclick="location.href='quiz.html'">
-                🏆 Quiz
+                Quiz Time
             </div>
 
             <div class="subject-card" onclick="location.href='aitutor.html'">
-                🤖 AI Tutor
+                AI Tutor
             </div>
 
             <div class="subject-card" onclick="location.href='badges.html'">
-                🏅 Badges
+                Badges
             </div>
 
             <div class="subject-card" onclick="location.href='story.html'" style="background-color: #A7F3A1;">
-                📖 Story Time
+                Moral Stories
             </div>
 
             <div class="subject-card" onclick="location.href='shop.html'" style="background-color: #ffd700;">
-                🏪 Reward Shop
+                Reward Shop
             </div>
 
             <div class="subject-card" onclick="location.href='certificate.html'">
-                📜 Certificate
+                Certificate
             </div>
 
             <div class="subject-card" onclick="location.href='memory.html'">
-                🧩 Memory Game
+                Memory Game
             </div>
 
             <div class="subject-card" onclick="location.href='drawing.html'">
-                🎨 Drawing
+                Drawing Book
             </div>
 
         </div>
 
         <br>
 
+        <button onclick="location.href='theme.html'">
+            Area Themes
+        </button>
+
         <button onclick="location.href='settings.html'">
-            ⚙️ Settings
+            Settings
         </button>
 
         <button onclick="location.href='parent.html'">
-            🔒 Parent Dashboard
+            Parent Dashboard
         </button>
 
         <button onclick="logout()">
-            🚪 Logout
+            Logout
         </button>
 
     </div>
 
+    <script src="js/storage.js"></script>
+    <script src="js/theme.js"></script>
     <script src="js/learninghub.js"></script>
     <script src="js/timer.js"></script>
 

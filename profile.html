@@ -3,47 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Profile</title>
-
+    <title>User Login & Profile - YellowPaws</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <div class="profile-container">
+    <div class="profile-container" style="max-width: 500px;">
+        <img src="assets/mascot/yellowpaws_logo.png" onerror="this.src='file:///C:/Users/gouri/.gemini/antigravity-ide/brain/c86b4cca-6a8a-4a8e-857e-dd3b5eb76b6b/yellowpaws_logo_1786774952499.png'" alt="YellowPaws Mascot" class="mascot-logo" style="width:120px; height:120px;">
+        
+        <h1 id="formHeading">Account & Profile</h1>
 
-        <h1>🐶 Create Your Profile</h1>
-
-        <p>Choose your avatar and nickname!</p>
-
-        <div class="avatar-grid">
-
-            <div class="avatar" onclick="selectAvatar('🐶')">🐶</div>
-            <div class="avatar" onclick="selectAvatar('🐼')">🐼</div>
-            <div class="avatar" onclick="selectAvatar('🐰')">🐰</div>
-            <div class="avatar" onclick="selectAvatar('🦁')">🦁</div>
-            <div class="avatar" onclick="selectAvatar('🐯')">🐯</div>
-            <div class="avatar" onclick="selectAvatar('🐨')">🐨</div>
-
+        <div style="display:flex; gap:10px; margin-bottom:20px; width:100%;">
+            <button id="tabRegister" onclick="switchMode('register')" style="flex:1; background:#FFB703;">New Account</button>
+            <button id="tabLogin" onclick="switchMode('login')" style="flex:1; background:#e0e0e0;">User Login</button>
         </div>
 
-        <input
-            type="text"
-            id="nickname"
-            placeholder="Enter your nickname"
-        >
+        <!-- Login / Register Form -->
+        <div style="width:100%; text-align:left;">
+            <label style="font-weight:bold; display:block; margin:8px 0 4px 0;">Username</label>
+            <input type="text" id="username" placeholder="Enter username" style="width:100%;">
 
-        <br><br>
+            <label style="font-weight:bold; display:block; margin:12px 0 4px 0;">Password</label>
+            <input type="password" id="password" placeholder="Enter password" style="width:100%;">
 
-        <button onclick="saveProfile()">
-            Save Profile
+            <div id="registerFields">
+                <label style="font-weight:bold; display:block; margin:12px 0 4px 0;">Nickname</label>
+                <input type="text" id="nickname" placeholder="e.g. Alex" maxlength="15" style="width:100%;">
+
+                <label style="font-weight:bold; display:block; margin:15px 0 8px 0;">Pick your Avatar</label>
+                <div class="avatar-grid">
+                    <div class="avatar text-avatar selected" onclick="selectAvatar('Puppy')">Puppy</div>
+                    <div class="avatar text-avatar" onclick="selectAvatar('Kitten')">Kitten</div>
+                    <div class="avatar text-avatar" onclick="selectAvatar('Lion Cub')">Lion Cub</div>
+                    <div class="avatar text-avatar" onclick="selectAvatar('Bunny')">Bunny</div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <button id="submitBtn" onclick="handleSubmit()" style="width:100%;">
+            Save & Continue
         </button>
 
-        <p id="message"></p>
-
+        <p id="message" style="margin-top:15px; font-weight:bold;"></p>
+        
+        <button onclick="location.href='index.html'" style="background-color:#e0e0e0; margin-top:10px;">
+            Back Home
+        </button>
     </div>
 
+    <script src="js/storage.js"></script>
     <script src="js/profile.js"></script>
     <script src="js/timer.js"></script>
-
 </body>
 </html>

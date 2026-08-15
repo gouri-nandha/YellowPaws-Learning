@@ -1,38 +1,23 @@
 const CORRECT_PIN = "1234";
 
 function verifyPin() {
-const enteredPin =
-    document.getElementById("pinInput").value;
+    const enteredPin = document.getElementById("pinInput").value;
 
-if (enteredPin === CORRECT_PIN) {
-
-    document.getElementById(
-        "pinSection"
-    ).style.display = "none";
-
-    document.getElementById(
-        "dashboard"
-    ).style.display = "block";
-
-    loadDashboard();
-
-} else {
-
-    document.getElementById(
-        "pinMessage"
-    ).textContent =
-    "❌ Incorrect PIN";
-}
-
-
+    if (enteredPin === CORRECT_PIN) {
+        document.getElementById("pinSection").style.display = "none";
+        document.getElementById("dashboard").style.display = "block";
+        loadDashboard();
+    } else {
+        document.getElementById("pinMessage").textContent = "Incorrect PIN";
+        document.getElementById("pinMessage").style.color = "red";
+    }
 }
 
 function loadDashboard() {
-
-    const profile = JSON.parse(localStorage.getItem("yellowPawsProfile")) || {};
+    const profile = (window.YellowPawsStorage && window.YellowPawsStorage.getProfile()) || JSON.parse(localStorage.getItem("yellowPawsProfile")) || {};
     
-    document.getElementById("childAvatar").textContent = profile.avatar || "🐶";
-    document.getElementById("childNickname").textContent = profile.nickname || "Unknown";
+    document.getElementById("childAvatar").textContent = profile.avatar || "Puppy";
+    document.getElementById("childNickname").textContent = profile.nickname || profile.username || "Unknown";
     
     let stars = profile.stars || 0;
     document.getElementById("totalStars").textContent = stars;
@@ -46,14 +31,13 @@ function loadDashboard() {
     
     document.getElementById("childRank").textContent = rank;
 
-    document.getElementById("quizCount").textContent = profile.quizCount || 0;
+    document.getElementById("quizCount").textContent = profile.quizCount || profile.quiz_count || 0;
 
     const usedSeconds = Number(localStorage.getItem("usedTime")) || 0;
     const minutes = Math.floor(usedSeconds / 60);
     document.getElementById("timeUsed").textContent = minutes + " Minutes";
 
     renderChart(stars, profile.quizCount || 0, minutes);
-
 }
 
 let progressChartInstance = null;
@@ -88,48 +72,41 @@ function renderChart(stars, quizzes, minutes) {
 }
 
 function saveTimeLimit() {
-
-
-const limit =
-    document.getElementById(
-        "timeLimit"
-    ).value;
-
-localStorage.setItem(
-    "screenTimeLimit",
-    limit
-);
-
-alert(
-    "✅ Screen time limit saved!"
-);
-
-
+    const limit = document.getElementById("timeLimit").value;
+    localStorage.setItem("screenTimeLimit", limit);
+    alert("Screen time limit saved!");
 }
 
 function resetProgress() {
     if (confirm("Are you sure you want to reset all progress?")) {
+        if (window.YellowPawsStorage) {
+            window.YellowPawsStorage.logout();
+        }
         localStorage.removeItem("yellowPawsProfile");
         localStorage.removeItem("usedTime");
-        alert("✅ Progress reset successfully!");
+        alert("Progress reset successfully!");
         window.location.href = "index.html";
     }
 }
 
 function resetStars() {
     if (confirm("Reset only the stars?")) {
-        const profile = JSON.parse(localStorage.getItem("yellowPawsProfile"));
-        if (profile) {
-            profile.stars = 0;
-            localStorage.setItem("yellowPawsProfile", JSON.stringify(profile));
+        if (window.YellowPawsStorage) {
+            window.YellowPawsStorage.updateProfile({ stars: 0 });
+        } else {
+            const profile = JSON.parse(localStorage.getItem("yellowPawsProfile"));
+            if (profile) {
+                profile.stars = 0;
+                localStorage.setItem("yellowPawsProfile", JSON.stringify(profile));
+            }
         }
-        alert("✅ Stars reset!");
+        alert("Stars reset!");
         loadDashboard();
     }
 }
 
 function exportReport() {
-    const profile = JSON.parse(localStorage.getItem("yellowPawsProfile")) || {};
+    const profile = (window.YellowPawsStorage && window.YellowPawsStorage.getProfile()) || JSON.parse(localStorage.getItem("yellowPawsProfile")) || {};
     const usedSeconds = Number(localStorage.getItem("usedTime")) || 0;
     
     const { jsPDF } = window.jspdf;
@@ -139,7 +116,7 @@ function exportReport() {
     doc.text("YellowPaws Learning Report", 20, 20);
     
     doc.setFontSize(16);
-    doc.text(`Child: ${profile.nickname || "Unknown"}`, 20, 40);
+    doc.text(`Child: ${profile.nickname || profile.username || "Unknown"}`, 20, 40);
     doc.text(`Total Stars: ${profile.stars || 0}`, 20, 50);
     doc.text(`Quizzes Completed: ${profile.quizCount || 0}`, 20, 60);
     doc.text(`Learning Time: ${Math.floor(usedSeconds / 60)} minutes`, 20, 70);

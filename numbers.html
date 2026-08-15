@@ -13,17 +13,17 @@
 
     <div class="numbers-container">
 
-        <h1>🔢 Learn Numbers</h1>
+        <h1>Learn Numbers</h1>
 
         <div class="number-card">
 
-            <h2 id="number">1</h2>
+            <h2 id="number" style="font-size:4rem; color:#FFB703;">1</h2>
 
-            <div id="objects" class="objects">
-                ⭐
+            <div id="objects" class="objects" style="font-size:1.5rem; letter-spacing:4px; margin:15px 0; color:#FFB703;">
+                Count: 1
             </div>
 
-            <h3 id="numberText">
+            <h3 id="numberText" style="font-size:1.8rem;">
                 One
             </h3>
 
@@ -32,19 +32,19 @@
         <div class="controls">
 
             <button onclick="previousNumber()">
-                ⬅ Previous
+                Previous
             </button>
 
             <button onclick="speakNumber()">
-                🔊 Speak
+                Speak
             </button>
 
             <button onclick="testPronunciation()" style="background-color: #6BCBFF;">
-                🎤 Pronounce
+                Pronounce
             </button>
 
             <button onclick="nextNumber()">
-                Next ➡
+                Next
             </button>
 
         </div>
@@ -52,11 +52,12 @@
         <br>
 
         <button onclick="location.href='learninghub.html'">
-            🏠 Back to Hub
+            Back to Hub
         </button>
 
     </div>
 
+    <script src="js/storage.js"></script>
     <script src="js/speech.js"></script>
     <script src="js/numbers.js"></script>
     <script src="js/timer.js"></script>

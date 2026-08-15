@@ -1,15 +1,11 @@
-const display =
-document.getElementById("selectedTheme");
+const display = document.getElementById("selectedTheme");
 
 function selectTheme(theme){
+    localStorage.setItem("selectedTheme", theme);
 
-    localStorage.setItem(
-        "selectedTheme",
-        theme
-    );
-
-    display.textContent =
-    `🎉 ${theme.toUpperCase()} theme selected!`;
+    if (display) {
+        display.textContent = `${theme.toUpperCase()} theme selected!`;
+    }
 
     switch(theme){
         case "jungle": document.body.style.backgroundColor = "#A7F3A1"; break;
@@ -21,8 +17,5 @@ function selectTheme(theme){
 }
 
 function goHome(){
-
-    window.location.href =
-    "index.html";
-
+    window.location.href = "index.html";
 }

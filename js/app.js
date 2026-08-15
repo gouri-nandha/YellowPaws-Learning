@@ -5,24 +5,17 @@ const messages = [
     "Learning is fun with YellowPaws!"
 ];
 
-const messageElement =
-document.getElementById("welcomeMessage");
+const messageElement = document.getElementById("welcomeMessage");
 
 setInterval(() => {
-
-    const random =
-    Math.floor(Math.random() * messages.length);
-
-    messageElement.textContent =
-    messages[random];
-
+    if (messageElement) {
+        const random = Math.floor(Math.random() * messages.length);
+        messageElement.textContent = messages[random];
+    }
 }, 3000);
 
 function startLearning() {
-
-    window.location.href =
-    "profile.html";
-
+    window.location.href = "profile.html";
 }
 
 let musicOn = localStorage.getItem("musicOn") === "true";
@@ -31,7 +24,7 @@ let musicOn = localStorage.getItem("musicOn") === "true";
 window.addEventListener("DOMContentLoaded", () => {
     const musicBtn = document.getElementById("musicBtn");
     if (musicBtn) {
-        musicBtn.textContent = musicOn ? "🎵 Music: On" : "🎵 Music: Off";
+        musicBtn.textContent = musicOn ? "Music: On" : "Music: Off";
     }
     applyTheme();
 });
@@ -60,9 +53,9 @@ function applyTheme(){
 }
 
 // Register Service Worker for PWA
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && (location.protocol === 'http:' || location.protocol === 'https:')) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').then(registration => {
+        navigator.serviceWorker.register('sw.js').then(registration => {
             console.log('SW registered: ', registration);
         }).catch(registrationError => {
             console.log('SW registration failed: ', registrationError);
@@ -75,13 +68,10 @@ function toggleMusic() {
     localStorage.setItem("musicOn", musicOn);
     const musicBtn = document.getElementById("musicBtn");
     if (musicBtn) {
-        musicBtn.textContent = musicOn ? "🎵 Music: On" : "🎵 Music: Off";
+        musicBtn.textContent = musicOn ? "Music: On" : "Music: Off";
     }
 }
 
 function parentArea() {
-
-    window.location.href =
-    "parent.html";
-
+    window.location.href = "parent.html";
 }

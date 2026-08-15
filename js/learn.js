@@ -1,24 +1,16 @@
-const nickname =
-localStorage.getItem("nickname");
+const profile = JSON.parse(localStorage.getItem("yellowPawsProfile")) || {};
+const nickname = profile.nickname || localStorage.getItem("nickname") || "Friend";
+const avatar = profile.avatar || localStorage.getItem("avatar") || "🐶";
+const stars = profile.stars ?? (localStorage.getItem("stars") || 0);
 
-const avatar =
-localStorage.getItem("avatar");
+const welcomeElem = document.getElementById("welcomeText");
+if (welcomeElem) welcomeElem.textContent = `Welcome, ${nickname}!`;
 
-const stars =
-localStorage.getItem("stars") || 0;
+const avatarElem = document.getElementById("avatarDisplay");
+if (avatarElem) avatarElem.textContent = avatar;
 
-document.getElementById(
-    "welcomeText"
-).textContent =
-`Welcome, ${nickname}!`;
-
-document.getElementById(
-    "avatarDisplay"
-).textContent = avatar;
-
-document.getElementById(
-    "starCount"
-).textContent = stars;
+const starElem = document.getElementById("starCount");
+if (starElem) starElem.textContent = stars;
 
 applyTheme();
 

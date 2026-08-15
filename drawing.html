@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drawing & Coloring</title>
+    <title>Drawing & Coloring - YellowPaws</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         .drawing-container {
@@ -22,12 +22,17 @@
             border-radius: 10px;
             background-color: #fff;
             cursor: crosshair;
+            touch-action: none;
+            max-width: 100%;
+            height: auto;
         }
         .tools {
             display: flex;
             gap: 15px;
             margin-top: 15px;
             align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .tool-btn {
             padding: 10px 15px;
@@ -45,7 +50,7 @@
 </head>
 <body>
     <div class="learn-container">
-        <h1>🎨 Drawing Book</h1>
+        <h1>Drawing Book</h1>
         
         <div class="drawing-container">
             <canvas id="drawCanvas" width="600" height="400"></canvas>
@@ -53,10 +58,10 @@
             <div class="tools">
                 <input type="color" id="colorPicker" value="#000000" style="width: 50px; height: 40px; cursor: pointer;">
                 <input type="range" id="brushSize" min="1" max="20" value="5">
-                <button class="tool-btn active" id="btnBrush" onclick="setTool('brush')">🖍️ Brush</button>
-                <button class="tool-btn" id="btnEraser" onclick="setTool('eraser')">🧼 Eraser</button>
-                <button class="tool-btn" onclick="clearCanvas()">🗑️ Clear</button>
-                <button class="tool-btn" onclick="saveCanvas()" style="background-color: #A7F3A1;">💾 Save</button>
+                <button class="tool-btn active" id="btnBrush" onclick="setTool('brush')">Brush</button>
+                <button class="tool-btn" id="btnEraser" onclick="setTool('eraser')">Eraser</button>
+                <button class="tool-btn" onclick="clearCanvas()">Clear</button>
+                <button class="tool-btn" onclick="saveCanvas()" style="background-color: #A7F3A1;">Save Drawing</button>
             </div>
         </div>
         
@@ -64,5 +69,6 @@
     </div>
 
     <script src="js/drawing.js"></script>
+    <script src="js/timer.js"></script>
 </body>
 </html>

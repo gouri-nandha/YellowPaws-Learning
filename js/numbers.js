@@ -24,52 +24,35 @@ const numberData = [
 let currentNumber = 0;
 
 function updateNumber() {
+    document.getElementById("number").textContent = numberData[currentNumber].num;
+    document.getElementById("numberText").textContent = numberData[currentNumber].text;
 
-    document.getElementById("number").textContent =
-        numberData[currentNumber].num;
-
-    document.getElementById("numberText").textContent =
-        numberData[currentNumber].text;
-
-    let stars = "";
-
+    let dots = "";
     for (let i = 0; i < numberData[currentNumber].num; i++) {
-        stars += "⭐";
+        dots += "[o] ";
     }
 
-    document.getElementById("objects").textContent =
-        stars;
+    document.getElementById("objects").textContent = dots.trim();
 }
 
 function nextNumber() {
-
     currentNumber++;
-
     if (currentNumber >= numberData.length) {
         currentNumber = 0;
     }
-
     updateNumber();
 }
 
 function previousNumber() {
-
     currentNumber--;
-
     if (currentNumber < 0) {
         currentNumber = numberData.length - 1;
     }
-
     updateNumber();
 }
 
 function speakNumber() {
-
-    let speech =
-        new SpeechSynthesisUtterance(
-            numberData[currentNumber].text
-        );
-
+    let speech = new SpeechSynthesisUtterance(numberData[currentNumber].text);
     speechSynthesis.speak(speech);
 }
 
@@ -78,16 +61,21 @@ function testPronunciation() {
     const objectsElement = document.getElementById("objects");
     
     listenToPronunciation(expectedWord, (isCorrect, spokenWord) => {
-        objectsElement.classList.remove("mascot-happy", "mascot-sad");
+        if (objectsElement) objectsElement.classList.remove("mascot-happy", "mascot-sad");
         
         if (isCorrect) {
-            objectsElement.classList.add("mascot-happy");
-            alert(`🎉 Great job! You said "${spokenWord}" correctly! +1 Star!`);
-            let profile = JSON.parse(localStorage.getItem("yellowPawsProfile")) || {stars: 0};
-            profile.stars = (profile.stars || 0) + 1;
-            localStorage.setItem("yellowPawsProfile", JSON.stringify(profile));
+            if (objectsElement) objectsElement.classList.add("mascot-happy");
+            alert(`Great job! You said "${spokenWord}" correctly! +1 Star!`);
+            let profile = (window.YellowPawsStorage && window.YellowPawsStorage.getProfile()) || JSON.parse(localStorage.getItem("yellowPawsProfile")) || {stars: 0};
+            const newStars = (profile.stars || 0) + 1;
+            if (window.YellowPawsStorage) {
+                window.YellowPawsStorage.updateProfile({ stars: newStars });
+            } else {
+                profile.stars = newStars;
+                localStorage.setItem("yellowPawsProfile", JSON.stringify(profile));
+            }
         } else {
-            objectsElement.classList.add("mascot-sad");
+            if (objectsElement) objectsElement.classList.add("mascot-sad");
             alert(`Oops! We heard "${spokenWord}". Try again to say "${expectedWord}"!`);
         }
     });

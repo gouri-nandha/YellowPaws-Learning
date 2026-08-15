@@ -3,54 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choose Theme</title>
-
+    <title>Choose Area Theme - YellowPaws</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="theme-container">
 
-        <h1>🌈 Choose Your Learning World</h1>
+        <h1>Choose Environment Area Theme</h1>
+        <p>Transform your entire learning world into an exciting environmental area!</p>
 
         <div class="theme-grid">
 
             <div class="theme-card jungle" onclick="selectTheme('jungle')">
-                🌳
-                <h2>Jungle Adventure</h2>
+                <div style="font-size: 1.5rem; font-weight:bold; margin-bottom:10px;">[Jungle]</div>
+                <h2>Jungle World</h2>
+                <p style="font-size:0.9rem; margin-top:5px;">Lush rainforest & wild vines</p>
             </div>
 
             <div class="theme-card space" onclick="selectTheme('space')">
-                🚀
-                <h2>Space Explorer</h2>
+                <div style="font-size: 1.5rem; font-weight:bold; margin-bottom:10px;">[Space]</div>
+                <h2>Deep Space</h2>
+                <p style="font-size:0.9rem; margin-top:5px;">Cosmic stars & glowing galaxies</p>
             </div>
 
             <div class="theme-card ocean" onclick="selectTheme('ocean')">
-                🌊
-                <h2>Ocean World</h2>
+                <div style="font-size: 1.5rem; font-weight:bold; margin-bottom:10px;">[Ocean]</div>
+                <h2>Ocean Kingdom</h2>
+                <p style="font-size:0.9rem; margin-top:5px;">Deep sea turquoise waters</p>
             </div>
 
             <div class="theme-card fantasy" onclick="selectTheme('fantasy')">
-                🏰
-                <h2>Fantasy Kingdom</h2>
+                <div style="font-size: 1.5rem; font-weight:bold; margin-bottom:10px;">[Fantasy]</div>
+                <h2>Enchanted Kingdom</h2>
+                <p style="font-size:0.9rem; margin-top:5px;">Magical golden fairytale glow</p>
             </div>
 
             <div class="theme-card rainbow" onclick="selectTheme('rainbow')">
-                🌈
-                <h2>Rainbow Land</h2>
+                <div style="font-size: 1.5rem; font-weight:bold; margin-bottom:10px;">[Rainbow]</div>
+                <h2>Rainbow Meadow</h2>
+                <p style="font-size:0.9rem; margin-top:5px;">Cheerful colorful sunshine</p>
             </div>
 
         </div>
 
-        <p id="selectedTheme"></p>
+        <p id="selectedTheme" style="font-size: 1.3rem; font-weight: bold; margin: 15px 0;"></p>
 
         <button onclick="goHome()">
-            Back Home
+            Back to Hub
         </button>
 
     </div>
 
     <script src="js/theme.js"></script>
-
+    <script src="js/timer.js"></script>
 </body>
 </html>

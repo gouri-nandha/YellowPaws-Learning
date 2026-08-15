@@ -13,31 +13,46 @@
 
     <div class="quiz-container">
 
-        <h1>🏆 Quiz Time</h1>
+        <div style="display:flex; justify-content:space-between; align-items:center; width:100%; margin-bottom:15px;">
+            <h1 style="margin:0;">Quiz Time</h1>
+            <div style="background:#FFF0A6; padding:8px 16px; border-radius:20px; font-weight:bold; font-size:1.2rem; border:2px solid #FFD93D;">
+                Stars: <span id="starDisplay">0</span>
+            </div>
+        </div>
 
         <div class="quiz-card">
 
-            <h2 id="question"></h2>
+            <h2 id="question" style="margin-bottom:20px;">Loading Question...</h2>
 
-            <div id="answers"></div>
+            <div id="answers" style="display:flex; flex-direction:column; gap:12px;"></div>
 
-            <p id="result"></p>
+            <p id="result" style="margin-top:20px; font-size:1.3rem; font-weight:bold; min-height:30px;"></p>
 
         </div>
 
-        <button id="nextBtn" onclick="nextQuestion()">
-            Next Question
-        </button>
+        <div class="controls" style="gap: 10px; width: 100%;">
+            <button id="readAloudToggleBtn" onclick="toggleReadAloud()" style="background-color: #6BCBFF; color: white;">
+                Read Aloud: Off
+            </button>
+            <button id="speakCurrentQuestionBtn" onclick="speakCurrentQuestion()" style="background-color: #4CAF50; color: white;">
+                Listen Question
+            </button>
+            <button id="nextBtn" onclick="nextQuestion()">
+                Next Question
+            </button>
+        </div>
 
-        <br><br>
+        <br>
 
         <button onclick="location.href='learninghub.html'">
-            🏠 Back to Hub
+            Back to Hub
         </button>
 
     </div>
 
+    <script src="js/storage.js"></script>
     <script src="js/quiz.js"></script>
+    <script src="js/timer.js"></script>
 </body>
 
 </html>

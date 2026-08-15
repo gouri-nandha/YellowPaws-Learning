@@ -13,8 +13,8 @@
     <div class="container">
 
         <div class="header-section">
-            <img src="C:/Users/gouri/.gemini/antigravity/brain/c851a369-e94b-4044-8a3a-520b19f48267/yellow_white_mascot_1782191424819.png" alt="YellowPaws Mascot" class="new-mascot mascot-happy">
-            <h1 class="main-title">🐾 YellowPaws Learning</h1>
+            <img src="assets/mascot/yellowpaws_logo.png" onerror="this.src='file:///C:/Users/gouri/.gemini/antigravity-ide/brain/c86b4cca-6a8a-4a8e-857e-dd3b5eb76b6b/yellowpaws_logo_1786774952499.png'" alt="YellowPaws Mascot" class="mascot-logo mascot-happy">
+            <h1 class="main-title">YellowPaws Learning</h1>
 
             <p id="welcomeMessage" class="subtitle">
                 Woof! Ready for a fun learning adventure?
@@ -26,12 +26,16 @@
                 Start Learning
             </button>
 
+            <button onclick="location.href='profile.html'">
+                User Account / Login
+            </button>
+
             <button onclick="location.href='theme.html'">
                 Choose Theme
             </button>
 
             <button onclick="toggleMusic()" id="musicBtn">
-                🎵 Music: Off
+                Music: Off
             </button>
 
             <button onclick="parentArea()">
@@ -41,6 +45,7 @@
 
     </div>
 
+    <script src="js/storage.js"></script>
     <script src="js/app.js"></script>
 
 </body>
