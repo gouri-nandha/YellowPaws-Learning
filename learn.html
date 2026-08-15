@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Hub</title>
+    <title>Learning Hub - YellowPaws</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,49 +11,54 @@
 
     <div class="learn-container">
 
-        <div class="profile-header">
+        <div class="profile-header" style="display:flex; align-items:center; gap:15px; margin-bottom:20px;">
 
-            <div id="avatarDisplay"></div>
+            <div id="avatarDisplay" style="font-size:1.5rem; font-weight:bold; color:#FFB703;">Puppy</div>
 
             <div>
-                <h2 id="welcomeText"></h2>
-                <p>⭐ Stars: <span id="starCount">0</span></p>
+                <h2 id="welcomeText">Welcome!</h2>
+                <p>Stars: <span id="starCount">0</span></p>
             </div>
 
         </div>
 
-        <h1>📚 Learning Hub</h1>
+        <h1>Learning Hub</h1>
 
         <div class="subject-grid">
 
             <div class="subject-card" onclick="startQuiz('abc')">
-                🔤
+                <div style="font-size: 1.5rem; font-weight:bold; margin-bottom:8px;">[ABC]</div>
                 <h3>ABC Learning</h3>
             </div>
 
             <div class="subject-card" onclick="startQuiz('numbers')">
-                🔢
+                <div style="font-size: 1.5rem; font-weight:bold; margin-bottom:8px;">[Numbers]</div>
                 <h3>Numbers</h3>
             </div>
 
             <div class="subject-card" onclick="startQuiz('science')">
-                🧪
+                <div style="font-size: 1.5rem; font-weight:bold; margin-bottom:8px;">[Science]</div>
                 <h3>Science</h3>
             </div>
 
             <div class="subject-card" onclick="startQuiz('gk')">
-                🌍
+                <div style="font-size: 1.5rem; font-weight:bold; margin-bottom:8px;">[Knowledge]</div>
                 <h3>General Knowledge</h3>
             </div>
+            
             <div class="subject-card" onclick="window.location.href='challenges.html'">
-                 ⭐
+                <div style="font-size: 1.5rem; font-weight:bold; margin-bottom:8px;">[Daily]</div>
                 <h3>Daily Challenge</h3>
             </div>
 
         </div>
 
+        <br>
+        <button onclick="location.href='learninghub.html'">Back to Main Hub</button>
+
     </div>
 
+    <script src="js/storage.js"></script>
     <script src="js/learn.js"></script>
     <script src="js/timer.js"></script>
 
