@@ -3,9 +3,10 @@ let currentMode = "register";
 
 function selectAvatar(avatar) {
     selectedAvatar = avatar;
-    document.querySelectorAll(".avatar").forEach(item => {
+    document.querySelectorAll(".avatar-card").forEach(item => {
         item.classList.remove("selected");
-        if (item.textContent.trim() === avatar) {
+        const label = item.querySelector(".avatar-label");
+        if (label && label.textContent.trim() === avatar) {
             item.classList.add("selected");
         }
     });

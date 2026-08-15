@@ -41,9 +41,9 @@
 
     <h1>Parent Dashboard</h1>
 
-    <div class="dashboard-card">
+    <div class="dashboard-card" style="display:flex; flex-direction:column; align-items:center;">
         <h2>Child Info</h2>
-        <p><strong>Avatar:</strong> <span id="childAvatar">Puppy</span></p>
+        <div id="childAvatarContainer" style="margin: 8px 0;"></div>
         <p><strong>Nickname:</strong> <span id="childNickname">Unknown</span></p>
         <p><strong>Current Rank:</strong> <span id="childRank">Beginner</span></p>
     </div>
@@ -91,6 +91,7 @@
 
 </div>
 
+<script src="js/icons.js"></script>
 <script src="js/storage.js"></script>
 <script src="js/theme.js"></script>
 <script src="js/parent.js"></script>

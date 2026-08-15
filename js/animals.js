@@ -1,19 +1,27 @@
 const animals = [
-    { name: "Dog", tag: "[Dog]", sound: "Woof Woof" },
-    { name: "Cat", tag: "[Cat]", sound: "Meow Meow" },
-    { name: "Lion", tag: "[Lion]", sound: "Roar" },
-    { name: "Elephant", tag: "[Elephant]", sound: "Trumpet" },
-    { name: "Monkey", tag: "[Monkey]", sound: "Ooh Ooh Ah Ah" },
-    { name: "Tiger", tag: "[Tiger]", sound: "Grrr" },
-    { name: "Rabbit", tag: "[Rabbit]", sound: "Hop Hop" },
-    { name: "Zebra", tag: "[Zebra]", sound: "Neigh" }
+    { name: "Dog", sound: "Woof Woof" },
+    { name: "Cat", sound: "Meow Meow" },
+    { name: "Lion", sound: "Roar" },
+    { name: "Elephant", sound: "Trumpet" },
+    { name: "Monkey", sound: "Ooh Ooh Ah Ah" },
+    { name: "Tiger", sound: "Grrr" },
+    { name: "Rabbit", sound: "Hop Hop" },
+    { name: "Zebra", sound: "Neigh" }
 ];
 
 let currentAnimal = 0;
 
 function updateAnimal() {
-    document.getElementById("animalEmoji").textContent = animals[currentAnimal].tag;
-    document.getElementById("animalName").textContent = animals[currentAnimal].name;
+    const animal = animals[currentAnimal];
+    const container = document.getElementById("animalEmoji");
+    if (container) {
+        if (window.YellowPawsIcons && window.YellowPawsIcons.animals[animal.name]) {
+            container.innerHTML = window.YellowPawsIcons.animals[animal.name];
+        } else {
+            container.textContent = animal.name;
+        }
+    }
+    document.getElementById("animalName").textContent = animal.name;
 }
 
 function nextAnimal() {
@@ -69,4 +77,4 @@ function playAnimalSound() {
     speechSynthesis.speak(sound);
 }
 
-updateAnimal();
+document.addEventListener("DOMContentLoaded", updateAnimal);

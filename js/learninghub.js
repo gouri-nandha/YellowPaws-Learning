@@ -8,10 +8,20 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // Display avatar
-    const avatarElement = document.getElementById("avatar");
-    if (avatarElement) {
-        avatarElement.textContent = profile.avatar || "Puppy";
+    // Display avatar graphic
+    const avatarContainer = document.getElementById("avatarContainer");
+    if (avatarContainer) {
+        const avName = profile.avatar || "Puppy";
+        const avFileMap = {
+            Puppy: "assets/avatars/puppy.png",
+            Kitten: "assets/avatars/kitten.png",
+            "Lion Cub": "assets/avatars/lion.png",
+            Bunny: "assets/avatars/bunny.png"
+        };
+        const pngSrc = avFileMap[avName] || "assets/avatars/puppy.png";
+        const svgFallback = window.YellowPawsIcons && window.YellowPawsIcons.avatars[avName] ? window.YellowPawsIcons.avatars[avName] : `<span>${avName}</span>`;
+
+        avatarContainer.innerHTML = `<img src="${pngSrc}" onerror="this.outerHTML='${svgFallback.replace(/'/g, "\\'")}'" style="width:65px; height:65px; object-fit:contain; border-radius:50%; border:3px solid #FFD93D;" alt="${avName}">`;
     }
 
     // Display nickname

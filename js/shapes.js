@@ -1,19 +1,27 @@
 const shapes = [
-    { name: "Circle", label: "[Circle]" },
-    { name: "Square", label: "[Square]" },
-    { name: "Triangle", label: "[Triangle]" },
-    { name: "Rectangle", label: "[Rectangle]" },
-    { name: "Star", label: "[Star]" },
-    { name: "Heart", label: "[Heart]" },
-    { name: "Diamond", label: "[Diamond]" },
-    { name: "Pentagon", label: "[Pentagon]" }
+    { name: "Circle" },
+    { name: "Square" },
+    { name: "Triangle" },
+    { name: "Rectangle" },
+    { name: "Star" },
+    { name: "Heart" },
+    { name: "Diamond" },
+    { name: "Pentagon" }
 ];
 
 let currentShape = 0;
 
 function updateShape() {
-    document.getElementById("shapeEmoji").textContent = shapes[currentShape].label;
-    document.getElementById("shapeName").textContent = shapes[currentShape].name;
+    const shape = shapes[currentShape];
+    const container = document.getElementById("shapeEmoji");
+    if (container) {
+        if (window.YellowPawsIcons && window.YellowPawsIcons.shapes[shape.name]) {
+            container.innerHTML = window.YellowPawsIcons.shapes[shape.name];
+        } else {
+            container.textContent = shape.name;
+        }
+    }
+    document.getElementById("shapeName").textContent = shape.name;
 }
 
 function nextShape() {
@@ -37,4 +45,4 @@ function speakShape() {
     speechSynthesis.speak(speech);
 }
 
-updateShape();
+document.addEventListener("DOMContentLoaded", updateShape);
