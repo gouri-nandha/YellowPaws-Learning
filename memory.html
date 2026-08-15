@@ -9,46 +9,57 @@
         .memory-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
+            gap: 14px;
             margin-top: 20px;
-            max-width: 400px;
+            max-width: 480px;
+            width: 100%;
             margin-left: auto;
             margin-right: auto;
         }
         .memory-card {
-            background-color: white;
-            height: 80px;
-            border-radius: 15px;
+            background-color: #ffffff;
+            aspect-ratio: 1;
+            border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 2rem;
             font-weight: bold;
             color: #2c3e50;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+            border: 3px solid #eaeaea;
+            transition: all 0.25s ease;
             user-select: none;
         }
+        .memory-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+        }
         .memory-card.hidden {
-            background-color: #ffb703;
+            background: linear-gradient(135deg, #ffb703, #ffa000);
             color: transparent;
+            border-color: #ff9100;
         }
         .memory-card.matched {
-            background-color: #A7F3A1;
+            background-color: #a7f3a1;
+            border-color: #2b9348;
+            color: #1b4332;
             cursor: default;
+            transform: scale(0.96);
         }
     </style>
 </head>
 <body>
     <div class="learn-container">
         <h1>Memory Game</h1>
-        <h3 id="memoryStatus">Find all the matching pairs!</h3>
+        <h3 id="memoryStatus" style="margin-top:8px; font-weight:600; color:#555;">Find all the matching pairs!</h3>
         
         <div class="memory-grid" id="memoryGrid"></div>
         
-        <div style="margin-top: 25px; display:flex; justify-content:center; gap:10px;">
-            <button onclick="initGame()" style="background-color:#6BCBFF;">Play Again</button>
-            <button onclick="location.href='learninghub.html'">Back to Hub</button>
+        <div style="margin-top: 25px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap; width:100%;">
+            <button onclick="initGame()" style="background-color:#6BCBFF; color:white; width:auto; max-width:none; padding:12px 24px;">Play Again</button>
+            <button onclick="location.href='learninghub.html'" style="width:auto; max-width:none; padding:12px 24px;">Back to Hub</button>
         </div>
     </div>
 

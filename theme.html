@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose Area Theme - YellowPaws</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/icons.js"></script>
 </head>
 <body>
 
@@ -17,7 +18,7 @@
 
             <div class="theme-card jungle" onclick="selectTheme('jungle')">
                 <div class="theme-icon-container" style="margin-bottom:12px;">
-                    <img src="assets/images/themes/jungle.png" onerror="this.outerHTML=YellowPawsIcons.themes.jungle" style="width:70px; height:70px; object-fit:contain;" alt="Jungle">
+                    <img src="assets/images/themes/jungle.png" onerror="this.src='assets/images/themes/jungle.svg'" style="width:75px; height:75px; object-fit:contain;" alt="Jungle">
                 </div>
                 <h2>Jungle World</h2>
                 <p style="font-size:0.9rem; margin-top:5px;">Lush rainforest & wild vines</p>
@@ -25,7 +26,7 @@
 
             <div class="theme-card space" onclick="selectTheme('space')">
                 <div class="theme-icon-container" style="margin-bottom:12px;">
-                    <script>document.write(YellowPawsIcons.themes.space);</script>
+                    <img src="assets/images/themes/space.svg" style="width:75px; height:75px; object-fit:contain;" alt="Space">
                 </div>
                 <h2>Deep Space</h2>
                 <p style="font-size:0.9rem; margin-top:5px;">Cosmic stars & glowing galaxies</p>
@@ -33,7 +34,7 @@
 
             <div class="theme-card ocean" onclick="selectTheme('ocean')">
                 <div class="theme-icon-container" style="margin-bottom:12px;">
-                    <script>document.write(YellowPawsIcons.themes.ocean);</script>
+                    <img src="assets/images/themes/ocean.svg" style="width:75px; height:75px; object-fit:contain;" alt="Ocean">
                 </div>
                 <h2>Ocean Kingdom</h2>
                 <p style="font-size:0.9rem; margin-top:5px;">Deep sea turquoise waters</p>
@@ -41,7 +42,7 @@
 
             <div class="theme-card fantasy" onclick="selectTheme('fantasy')">
                 <div class="theme-icon-container" style="margin-bottom:12px;">
-                    <script>document.write(YellowPawsIcons.themes.fantasy);</script>
+                    <img src="assets/images/themes/fantasy.svg" style="width:75px; height:75px; object-fit:contain;" alt="Fantasy">
                 </div>
                 <h2>Enchanted Kingdom</h2>
                 <p style="font-size:0.9rem; margin-top:5px;">Magical golden fairytale glow</p>
@@ -49,7 +50,7 @@
 
             <div class="theme-card rainbow" onclick="selectTheme('rainbow')">
                 <div class="theme-icon-container" style="margin-bottom:12px;">
-                    <script>document.write(YellowPawsIcons.themes.rainbow);</script>
+                    <img src="assets/images/themes/rainbow.svg" style="width:75px; height:75px; object-fit:contain;" alt="Rainbow">
                 </div>
                 <h2>Rainbow Meadow</h2>
                 <p style="font-size:0.9rem; margin-top:5px;">Cheerful colorful sunshine</p>
@@ -65,7 +66,6 @@
 
     </div>
 
-    <script src="js/icons.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/timer.js"></script>
 </body>

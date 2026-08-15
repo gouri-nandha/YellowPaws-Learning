@@ -20,15 +20,13 @@ function loadDashboard() {
     if (avatarContainer) {
         const avName = profile.avatar || "Puppy";
         const avFileMap = {
-            Puppy: "assets/avatars/puppy.png",
-            Kitten: "assets/avatars/kitten.png",
-            "Lion Cub": "assets/avatars/lion.png",
-            Bunny: "assets/avatars/bunny.png"
+            Puppy: "assets/avatars/puppy.svg",
+            Kitten: "assets/avatars/kitten.svg",
+            "Lion Cub": "assets/avatars/lion.svg",
+            Bunny: "assets/avatars/bunny.svg"
         };
-        const pngSrc = avFileMap[avName] || "assets/avatars/puppy.png";
-        const svgFallback = window.YellowPawsIcons && window.YellowPawsIcons.avatars[avName] ? window.YellowPawsIcons.avatars[avName] : `<span>${avName}</span>`;
-
-        avatarContainer.innerHTML = `<img src="${pngSrc}" onerror="this.outerHTML='${svgFallback.replace(/'/g, "\\'")}'" style="width:55px; height:55px; object-fit:contain; border-radius:50%; border:2px solid #FFD93D;" alt="${avName}">`;
+        const avatarSrc = avFileMap[avName] || "assets/avatars/puppy.svg";
+        avatarContainer.innerHTML = `<img src="${avatarSrc}" style="width:55px; height:55px; object-fit:contain; border-radius:50%; border:2px solid #FFD93D;" alt="${avName}">`;
     }
 
     document.getElementById("childNickname").textContent = profile.nickname || profile.username || "Unknown";

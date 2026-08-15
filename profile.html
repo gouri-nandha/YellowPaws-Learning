@@ -5,48 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Login & Profile - YellowPaws</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .avatar-card-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            width: 100%;
-            margin-top: 10px;
-        }
-        .avatar-card {
-            background: white;
-            border: 3px solid #eee;
-            border-radius: 16px;
-            padding: 10px 5px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        .avatar-card:hover {
-            transform: scale(1.05);
-        }
-        .avatar-card.selected {
-            border: 3px solid #FF6B6B;
-            background: #FFF0F0;
-            box-shadow: 0 4px 12px rgba(255,107,107,0.25);
-        }
-        .avatar-img {
-            width: 55px;
-            height: 55px;
-            object-fit: contain;
-            border-radius: 50%;
-        }
-        .avatar-label {
-            font-size: 0.85rem;
-            font-weight: bold;
-            color: #333;
-            margin-top: 6px;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
 
@@ -75,20 +33,20 @@
                 <label style="font-weight:bold; display:block; margin:15px 0 8px 0;">Pick your Avatar</label>
                 <div class="avatar-card-grid">
                     <div class="avatar-card selected" onclick="selectAvatar('Puppy')">
-                        <img src="assets/avatars/puppy.png" onerror="this.outerHTML=YellowPawsIcons.avatars.Puppy" class="avatar-img" alt="Puppy">
-                        <span class="avatar-label">Puppy</span>
+                        <img src="assets/avatars/puppy.svg" style="width:48px; height:48px; object-fit:contain;" alt="Puppy">
+                        <span class="avatar-label" style="font-size:0.75rem; margin-top:4px;">Puppy</span>
                     </div>
                     <div class="avatar-card" onclick="selectAvatar('Kitten')">
-                        <img src="assets/avatars/kitten.png" onerror="this.outerHTML=YellowPawsIcons.avatars.Kitten" class="avatar-img" alt="Kitten">
-                        <span class="avatar-label">Kitten</span>
+                        <img src="assets/avatars/kitten.svg" style="width:48px; height:48px; object-fit:contain;" alt="Kitten">
+                        <span class="avatar-label" style="font-size:0.75rem; margin-top:4px;">Kitten</span>
                     </div>
                     <div class="avatar-card" onclick="selectAvatar('Lion Cub')">
-                        <img src="assets/avatars/lion.png" onerror="this.outerHTML=YellowPawsIcons.avatars['Lion Cub']" class="avatar-img" alt="Lion Cub">
-                        <span class="avatar-label">Lion Cub</span>
+                        <img src="assets/avatars/lion.svg" style="width:48px; height:48px; object-fit:contain;" alt="Lion Cub">
+                        <span class="avatar-label" style="font-size:0.75rem; margin-top:4px;">Lion Cub</span>
                     </div>
                     <div class="avatar-card" onclick="selectAvatar('Bunny')">
-                        <img src="assets/avatars/bunny.png" onerror="this.outerHTML=YellowPawsIcons.avatars.Bunny" class="avatar-img" alt="Bunny">
-                        <span class="avatar-label">Bunny</span>
+                        <img src="assets/avatars/bunny.svg" style="width:48px; height:48px; object-fit:contain;" alt="Bunny">
+                        <span class="avatar-label" style="font-size:0.75rem; margin-top:4px;">Bunny</span>
                     </div>
                 </div>
             </div>
@@ -107,7 +65,6 @@
         </button>
     </div>
 
-    <script src="js/icons.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/profile.js"></script>
     <script src="js/timer.js"></script>
