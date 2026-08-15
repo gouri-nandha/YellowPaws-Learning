@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <path d="M40 50 C20 30 10 70 40 90 C70 70 60 30 40 50 Z" fill="rgba(82, 183, 136, 0.15)"/>
+  <path d="M220 180 C200 160 190 200 220 220 C250 200 240 160 220 180 Z" fill="rgba(116, 198, 157, 0.15)"/>
+  <circle cx="150" cy="80" r="15" fill="rgba(183, 228, 199, 0.15)"/>
+  <circle cx="80" cy="230" r="20" fill="rgba(82, 183, 136, 0.12)"/>
+  <path d="M120 200 Q150 170 180 200 T240 200" fill="none" stroke="rgba(116, 198, 157, 0.2)" stroke-width="4"/>
+  <path d="M260 60 C240 40 230 80 260 100 C290 80 280 40 260 60 Z" fill="rgba(82, 183, 136, 0.15)"/>
+</svg>
