@@ -1,6 +1,6 @@
 const alphabetData = [
     { letter: "A", word: "Apple" },
-    { letter: "B", word: "Ball" },
+    { letter: "B", word: "Balloon" },
     { letter: "C", word: "Cat" },
     { letter: "D", word: "Dog" },
     { letter: "E", word: "Elephant" },
@@ -17,7 +17,7 @@ const alphabetData = [
     { letter: "P", word: "Penguin" },
     { letter: "Q", word: "Queen" },
     { letter: "R", word: "Rabbit" },
-    { letter: "S", word: "Sun" },
+    { letter: "S", word: "Star" },
     { letter: "T", word: "Tree" },
     { letter: "U", word: "Umbrella" },
     { letter: "V", word: "Violin" },

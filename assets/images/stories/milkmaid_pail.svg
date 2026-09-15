@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+  <rect width="400" height="240" rx="20" fill="#fdf2f8"/>
+  <path d="M0 150 Q120 135 240 150 T400 145 L400 240 L0 240 Z" fill="#86efac"/>
+  <circle cx="340" cy="55" r="28" fill="#fde047"/>
+
+  <!-- Wildflowers in Meadow -->
+  <circle cx="50" cy="180" r="5" fill="#f43f5e"/>
+  <circle cx="80" cy="195" r="6" fill="#fbbf24"/>
+  <circle cx="120" cy="175" r="5" fill="#3b82f6"/>
+  <circle cx="320" cy="190" r="6" fill="#a855f7"/>
+  <circle cx="360" cy="180" r="5" fill="#f43f5e"/>
+
+  <!-- Cheerful Milkmaid Patty in Middle -->
+  <g transform="translate(170, 45)">
+    <!-- Shiny Pail of Milk on Head -->
+    <polygon points="18,30 42,30 38,5 22,5" fill="#cbd5e1" stroke="#64748b" stroke-width="2"/>
+    <ellipse cx="30" cy="5" rx="8" ry="3" fill="#ffffff"/>
+    <!-- Head -->
+    <circle cx="30" cy="46" r="16" fill="#fed7aa"/>
+    <!-- Pigtails -->
+    <circle cx="12" cy="44" r="8" fill="#b45309"/>
+    <circle cx="48" cy="44" r="8" fill="#b45309"/>
+    <!-- Cute Eyes and Smile -->
+    <circle cx="26" cy="45" r="2.5" fill="#0f172a"/>
+    <circle cx="34" cy="45" r="2.5" fill="#0f172a"/>
+    <path d="M26 52 Q30 56 34 52" stroke="#e11d48" stroke-width="2" fill="none"/>
+    <!-- Rosy Cheeks -->
+    <circle cx="22" cy="49" r="3" fill="#fbcfe8"/>
+    <circle cx="38" cy="49" r="3" fill="#fbcfe8"/>
+    <!-- Pretty Country Dress -->
+    <polygon points="20,62 40,62 48,110 12,110" fill="#ec4899"/>
+    <!-- Apron -->
+    <polygon points="24,68 36,68 40,110 20,110" fill="#ffffff"/>
+    <!-- Hands holding edges of apron -->
+    <circle cx="14" cy="85" r="5" fill="#fed7aa"/>
+    <circle cx="46" cy="85" r="5" fill="#fed7aa"/>
+    <!-- Shoes -->
+    <ellipse cx="22" cy="116" rx="6" ry="4" fill="#831843"/>
+    <ellipse cx="38" cy="116" rx="6" ry="4" fill="#831843"/>
+  </g>
+
+  <!-- Thought Bubble of Chickens, Eggs, and Fancy Party Dress -->
+  <g transform="translate(70, 30)">
+    <ellipse cx="35" cy="35" rx="32" ry="24" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <circle cx="70" cy="55" r="5" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <circle cx="80" cy="62" r="3" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="18" y="42" font-size="22">🥚🐣👗</text>
+  </g>
+</svg>

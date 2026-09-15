@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bbf2f6"/>
+      <stop offset="100%" stop-color="#e0f7fa"/>
+    </linearGradient>
+    <linearGradient id="grassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#70e000"/>
+      <stop offset="100%" stop-color="#38b000"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="240" rx="20" fill="url(#skyGrad)"/>
+  <circle cx="340" cy="50" r="28" fill="#ffd166"/>
+  <path d="M0 160 Q100 130 200 160 T400 150 L400 240 L0 240 Z" fill="url(#grassGrad)"/>
+  
+  <!-- Shady Tree for Hare -->
+  <rect x="70" y="90" width="22" height="70" rx="6" fill="#8d5b4c"/>
+  <circle cx="81" cy="75" r="45" fill="#38b000"/>
+  <circle cx="60" cy="80" r="30" fill="#70e000"/>
+  <circle cx="105" cy="80" r="30" fill="#70e000"/>
+
+  <!-- Sleeping Hare (Bunny) -->
+  <ellipse cx="115" cy="170" rx="20" ry="14" fill="#e9ecef"/>
+  <circle cx="130" cy="164" r="11" fill="#e9ecef"/>
+  <ellipse cx="126" cy="148" rx="4" ry="10" fill="#e9ecef" transform="rotate(30 126 148)"/>
+  <ellipse cx="134" cy="150" rx="4" ry="10" fill="#ffccd5" transform="rotate(45 134 150)"/>
+  <path d="M125 166 Q130 170 135 166" stroke="#495057" stroke-width="2" fill="none"/>
+  <!-- Zzz -->
+  <text x="145" y="145" font-family="'Comic Sans MS', sans-serif" font-size="14" font-weight="bold" fill="#3a86ff">z</text>
+  <text x="155" y="132" font-family="'Comic Sans MS', sans-serif" font-size="18" font-weight="bold" fill="#3a86ff">Z</text>
+  
+  <!-- Determined Tortoise -->
+  <!-- Shell -->
+  <path d="M250 180 C250 145 300 145 300 180 Z" fill="#2d6a4f"/>
+  <path d="M260 180 C260 155 290 155 290 180 Z" fill="#52b788"/>
+  <line x1="275" y1="152" x2="275" y2="180" stroke="#1b4332" stroke-width="2.5"/>
+  <line x1="262" y1="165" x2="288" y2="165" stroke="#1b4332" stroke-width="2.5"/>
+  <!-- Head & Legs -->
+  <circle cx="310" cy="170" r="10" fill="#74c69d"/>
+  <circle cx="313" cy="168" r="2" fill="#1b4332"/>
+  <path d="M312 173 Q316 175 318 172" stroke="#1b4332" stroke-width="1.5" fill="none"/>
+  <!-- Red Winner Headband -->
+  <path d="M305 162 L315 162" stroke="#ff4d6d" stroke-width="3"/>
+  <ellipse cx="255" cy="183" rx="6" ry="4" fill="#74c69d"/>
+  <ellipse cx="295" cy="183" rx="6" ry="4" fill="#74c69d"/>
+  
+  <!-- Finish Flag -->
+  <line x1="360" y1="120" x2="360" y2="190" stroke="#495057" stroke-width="4"/>
+  <polygon points="360,120 395,135 360,150" fill="#ff4d6d"/>
+  <circle cx="360" cy="120" r="4" fill="#ffd166"/>
+</svg>

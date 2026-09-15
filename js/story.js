@@ -1,7 +1,7 @@
 const stories = [
     {
         title: "The Tortoise & The Hare",
-        image: "assets/images/stories/tortoise_hare.png",
+        image: "assets/images/stories/tortoise_hare.svg",
         slides: [
             "Once upon a time, a speedy Hare bragged about how fast he could run.",
             "Tired of hearing him boast, the slow Tortoise challenged him to a race.",
@@ -13,7 +13,7 @@ const stories = [
     },
     {
         title: "The Lion & The Mouse",
-        image: "assets/images/stories/lion_mouse.png",
+        image: "assets/images/stories/lion_mouse.svg",
         slides: [
             "A mighty Lion trapped a tiny Mouse, but decided to let him go free.",
             "The Mouse promised to help the Lion one day if he ever needed it.",
@@ -25,7 +25,7 @@ const stories = [
     },
     {
         title: "The Ant & The Grasshopper",
-        image: "assets/images/stories/ant_grasshopper.png",
+        image: "assets/images/stories/ant_grasshopper.svg",
         slides: [
             "In summer, a hardworking Ant collected food while a Grasshopper sang all day.",
             "The Ant warned him to prepare for the cold winter ahead.",
@@ -37,7 +37,7 @@ const stories = [
     },
     {
         title: "The Crow & The Pitcher",
-        image: "assets/images/stories/crow_pitcher.png",
+        image: "assets/images/stories/crow_pitcher.svg",
         slides: [
             "A thirsty Crow found a pitcher with water at the very bottom.",
             "His beak couldn't reach the water inside the tall pitcher.",
@@ -49,7 +49,7 @@ const stories = [
     },
     {
         title: "The Honest Woodcutter",
-        image: "assets/images/stories/honest_woodcutter.png",
+        image: "assets/images/stories/honest_woodcutter.svg",
         slides: [
             "An honest Woodcutter accidentally dropped his iron axe into a deep river.",
             "A river fairy appeared with a golden axe, but he said it was not his.",
@@ -61,7 +61,7 @@ const stories = [
     },
     {
         title: "The Fox & The Grapes",
-        image: "assets/images/stories/fox_grapes.png",
+        image: "assets/images/stories/fox_grapes.svg",
         slides: [
             "A hungry Fox saw juicy purple grapes hanging high on a vine.",
             "He took a running start and jumped high, but missed them.",
@@ -73,7 +73,7 @@ const stories = [
     },
     {
         title: "The Boy Who Cried Wolf",
-        image: "assets/images/stories/boy_wolf.png",
+        image: "assets/images/stories/boy_wolf.svg",
         slides: [
             "A bored shepherd boy shouted 'Wolf! Wolf!' to trick the villagers.",
             "Villagers ran up the hill to help, only to find no wolf.",
@@ -85,7 +85,7 @@ const stories = [
     },
     {
         title: "King Midas & The Golden Touch",
-        image: "assets/images/stories/midas_gold.png",
+        image: "assets/images/stories/midas_gold.svg",
         slides: [
             "King Midas wished that everything he touched would turn to gold.",
             "His wish was granted, and he turned flowers and tables into solid gold.",
@@ -97,7 +97,7 @@ const stories = [
     },
     {
         title: "The Ugly Duckling",
-        image: "assets/images/stories/ugly_duckling.png",
+        image: "assets/images/stories/ugly_duckling.svg",
         slides: [
             "A little duckling looked different from his brothers and was teased.",
             "He felt sad and wandered alone through the winter forest.",
@@ -109,7 +109,7 @@ const stories = [
     },
     {
         title: "The Goose That Laid Golden Eggs",
-        image: "assets/images/stories/golden_eggs.png",
+        image: "assets/images/stories/golden_eggs.svg",
         slides: [
             "A countryman owned a special goose that laid one golden egg every day.",
             "He became rich selling the golden eggs in the town market.",
@@ -121,7 +121,7 @@ const stories = [
     },
     {
         title: "Two Silly Goats",
-        image: "assets/images/stories/two_goats.png",
+        image: "assets/images/stories/two_goats.svg",
         slides: [
             "Two goats met in the middle of a very narrow bridge over a river.",
             "The bridge was so narrow that only one goat could cross at a time.",
@@ -133,7 +133,7 @@ const stories = [
     },
     {
         title: "The Milkmaid & Her Pail",
-        image: "assets/images/stories/milkmaid_pail.png",
+        image: "assets/images/stories/milkmaid_pail.svg",
         slides: [
             "Patty the milkmaid carried a pail of fresh milk balanced on her head.",
             "She dreamed of selling milk to buy eggs, hatching chickens, and buying a dress.",

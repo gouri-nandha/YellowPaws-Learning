@@ -1,20 +1,26 @@
 const display = document.getElementById("selectedTheme");
 
-function selectTheme(theme){
-    localStorage.setItem("selectedTheme", theme);
+function selectTheme(theme = "rainbow"){
+    localStorage.setItem("selectedTheme", "rainbow");
 
     if (display) {
-        display.textContent = `${theme.toUpperCase()} theme selected!`;
+        display.textContent = `Rainbow Meadow theme selected!`;
     }
 
-    switch(theme){
-        case "jungle": document.body.style.backgroundColor = "#A7F3A1"; break;
-        case "space": document.body.style.backgroundColor = "#B8C0FF"; break;
-        case "ocean": document.body.style.backgroundColor = "#9EE7FF"; break;
-        case "fantasy": document.body.style.backgroundColor = "#FFD6EC"; break;
-        case "rainbow": document.body.style.backgroundColor = "#FFF0A6"; break;
+    document.body.classList.remove("theme-jungle", "theme-space", "theme-ocean", "theme-fantasy");
+    document.body.classList.add("theme-rainbow");
+}
+
+function initThemes() {
+    localStorage.setItem("selectedTheme", "rainbow");
+    document.body.classList.remove("theme-jungle", "theme-space", "theme-ocean", "theme-fantasy");
+    document.body.classList.add("theme-rainbow");
+    if (display) {
+        display.textContent = `Active Theme: RAINBOW MEADOW`;
     }
 }
+
+document.addEventListener("DOMContentLoaded", initThemes);
 
 function goHome(){
     window.location.href = "index.html";

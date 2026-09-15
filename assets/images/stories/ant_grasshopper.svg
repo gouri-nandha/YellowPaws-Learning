@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="antSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cbf3f0"/>
+      <stop offset="100%" stop-color="#e2ece9"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" rx="20" fill="url(#antSky)"/>
+  <path d="M0 160 Q150 140 300 165 T400 155 L400 240 L0 240 Z" fill="#52b788"/>
+  <circle cx="60" cy="50" r="28" fill="#ffd166"/>
+
+  <!-- Cheerful Grasshopper playing fiddle -->
+  <!-- Body -->
+  <ellipse cx="120" cy="145" rx="14" ry="30" fill="#38b000" transform="rotate(15 120 145)"/>
+  <circle cx="112" cy="110" r="14" fill="#70e000"/>
+  <!-- Eyes -->
+  <circle cx="108" cy="106" r="3.5" fill="#000"/>
+  <circle cx="118" cy="106" r="3.5" fill="#000"/>
+  <path d="M108 116 Q114 120 118 116" stroke="#000" stroke-width="2" fill="none"/>
+  <!-- Antennae -->
+  <path d="M108 98 Q100 80 92 84" stroke="#38b000" stroke-width="2.5" fill="none"/>
+  <path d="M116 98 Q120 80 128 82" stroke="#38b000" stroke-width="2.5" fill="none"/>
+  <!-- Legs -->
+  <path d="M125 145 L145 120 L150 175" stroke="#38b000" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Tiny Violin & Notes -->
+  <rect x="95" y="125" width="20" height="12" rx="4" fill="#b08968" transform="rotate(-20 95 125)"/>
+  <line x1="88" y1="120" x2="115" y2="140" stroke="#7f5539" stroke-width="2"/>
+  <text x="145" y="95" font-family="'Comic Sans MS', sans-serif" font-size="18" fill="#ff4d6d">♪</text>
+  <text x="165" y="80" font-family="'Comic Sans MS', sans-serif" font-size="22" fill="#3a86ff">♫</text>
+
+  <!-- Hardworking Little Ant carrying red apple -->
+  <!-- Body (Head, Thorax, Abdomen) -->
+  <ellipse cx="290" cy="175" rx="12" ry="10" fill="#8d5b4c"/>
+  <circle cx="272" cy="172" r="8" fill="#8d5b4c"/>
+  <circle cx="258" cy="166" r="8" fill="#8d5b4c"/>
+  <circle cx="255" cy="164" r="2" fill="#000"/>
+  <!-- Antennae -->
+  <path d="M254 158 Q248 148 244 150" stroke="#8d5b4c" stroke-width="2" fill="none"/>
+  <!-- Legs -->
+  <path d="M260 172 L256 186 M272 176 L270 188 M285 180 L288 188" stroke="#8d5b4c" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Carrying a shiny red Apple on back -->
+  <circle cx="295" cy="145" r="22" fill="#e63946"/>
+  <path d="M295 123 Q300 115 304 118" stroke="#582f0e" stroke-width="3" fill="none"/>
+  <path d="M296 122 C305 116 312 120 308 128 C302 128 298 125 296 122 Z" fill="#70e000"/>
+  <ellipse cx="288" cy="138" rx="4" ry="8" fill="#fff" opacity="0.6"/>
+</svg>

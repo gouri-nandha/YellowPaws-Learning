@@ -22,22 +22,5 @@ function startQuiz(subject){
 }
 
 function applyTheme(){
-    const theme = localStorage.getItem("selectedTheme");
-    switch(theme){
-        case "jungle":
-            document.body.style.backgroundColor = "#A7F3A1";
-            break;
-        case "space":
-            document.body.style.backgroundColor = "#B8C0FF";
-            break;
-        case "ocean":
-            document.body.style.backgroundColor = "#9EE7FF";
-            break;
-        case "fantasy":
-            document.body.style.backgroundColor = "#FFD6EC";
-            break;
-        case "rainbow":
-            document.body.style.backgroundColor = "#FFF0A6";
-            break;
-    }
+    document.body.style.backgroundColor = "#FFF0A6";
 }

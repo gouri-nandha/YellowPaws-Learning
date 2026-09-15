@@ -1,39 +1,312 @@
 // YellowPaws Learning SVG Icon Engine
 const YellowPawsIcons = {
     alphabet: {
-        A: `<svg viewBox="0 0 100 100" width="90" height="90"><circle cx="50" cy="50" r="42" fill="#ff4d6d"/><path d="M50 18 C30 18 20 40 20 60 C20 80 35 90 50 90 C65 90 80 80 80 60 C80 40 70 18 50 18 Z" fill="#ff758f"/><path d="M50 18 Q60 5 65 12" stroke="#40916c" stroke-width="4" fill="none"/><path d="M50 20 C60 10 75 15 70 28 C60 30 52 25 50 20 Z" fill="#52b788"/><ellipse cx="38" cy="45" rx="4" ry="7" fill="#fff" opacity="0.6"/></svg>`,
-        B: `<svg viewBox="0 0 100 100" width="90" height="90"><circle cx="50" cy="50" r="45" fill="#3a86ff"/><circle cx="50" cy="45" r="30" fill="#ff4d6d"/><path d="M50 75 C45 75 42 85 45 92 L55 92 C58 85 55 75 50 75 Z" fill="#ffd166"/><line x1="50" y1="15" x2="50" y2="5" stroke="#fff" stroke-width="3"/></svg>`,
-        C: `<svg viewBox="0 0 100 100" width="90" height="90"><circle cx="50" cy="50" r="45" fill="#ffb703"/><polygon points="18,18 35,30 18,42" fill="#fb8500"/><polygon points="82,18 65,30 82,42" fill="#fb8500"/><circle cx="35" cy="45" r="6" fill="#2196f3"/><circle cx="65" cy="45" r="6" fill="#2196f3"/><polygon points="50,54 45,50 55,50" fill="#ff4d6d"/><path d="M45 58 Q50 63 55 58" stroke="#333" stroke-width="2.5" fill="none"/><line x1="20" y1="50" x2="35" y2="52" stroke="#333" stroke-width="2"/><line x1="80" y1="50" x2="65" y2="52" stroke="#333" stroke-width="2"/></svg>`,
-        D: `<svg viewBox="0 0 100 100" width="90" height="90"><circle cx="50" cy="50" r="45" fill="#ffd93d"/><ellipse cx="18" cy="45" rx="12" ry="22" fill="#e76f51"/><ellipse cx="82" cy="45" rx="12" ry="22" fill="#e76f51"/><circle cx="38" cy="42" r="6" fill="#264653"/><circle cx="62" cy="42" r="6" fill="#264653"/><ellipse cx="50" cy="55" rx="10" ry="7" fill="#f4a261"/><ellipse cx="50" cy="53" rx="5" ry="4" fill="#264653"/><path d="M45 60 Q50 66 55 60" stroke="#264653" stroke-width="3" fill="none"/></svg>`,
-        E: `<svg viewBox="0 0 100 100" width="90" height="90"><circle cx="50" cy="50" r="42" fill="#48cae4"/><circle cx="20" cy="45" r="18" fill="#90e0ef"/><circle cx="80" cy="45" r="18" fill="#90e0ef"/><circle cx="38" cy="42" r="5" fill="#03045e"/><circle cx="62" cy="42" r="5" fill="#03045e"/><path d="M46 50 C46 70 54 75 62 65" stroke="#90e0ef" stroke-width="7" stroke-linecap="round" fill="none"/></svg>`,
-        F: `<svg viewBox="0 0 100 100" width="90" height="90"><path d="M10 50 C20 20 80 20 90 50 C80 80 20 80 10 50 Z" fill="#00b4d8"/><polygon points="85,50 100,35 100,65" fill="#0077b6"/><circle cx="30" cy="42" r="4" fill="#fff"/><polygon points="40,25 50,10 60,25" fill="#0077b6"/><polygon points="40,75 50,90 60,75" fill="#0077b6"/></svg>`,
-        G: `<svg viewBox="0 0 100 100" width="90" height="90"><path d="M50 10 Q70 10 65 35 L60 85 L40 85 L35 35 Q30 10 50 10 Z" fill="#f4a261"/><circle cx="50" cy="25" r="20" fill="#e76f51"/><circle cx="42" cy="20" r="4" fill="#333"/><circle cx="58" cy="20" r="4" fill="#333"/><path d="M35 12 L38 2 L45 8 Z" fill="#e76f51"/><path d="M65 12 L62 2 L55 8 Z" fill="#e76f51"/></svg>`,
-        H: `<svg viewBox="0 0 100 100" width="90" height="90"><rect x="15" y="40" width="70" height="50" fill="#ff70a6"/><polygon points="50,10 10,42 90,42" fill="#ff4d6d"/><rect x="40" y="60" width="20" height="30" fill="#ffb703"/><rect x="25" y="50" width="12" height="12" rx="3" fill="#fff"/><rect x="63" y="50" width="12" height="12" rx="3" fill="#fff"/></svg>`,
-        I: `<svg viewBox="0 0 100 100" width="90" height="90"><path d="M30 20 L70 20 L50 85 Z" fill="#fff0a6"/><ellipse cx="50" cy="22" rx="22" ry="12" fill="#ff4d6d"/><circle cx="50" cy="12" r="6" fill="#d90429"/><rect x="45" y="85" width="10" height="12" fill="#d4a373"/></svg>`,
-        J: `<svg viewBox="0 0 100 100" width="90" height="90"><path d="M30 20 Q50 10 70 20 L65 50 Q50 60 35 50 Z" fill="#ffb703"/><rect x="35" y="50" width="30" height="35" rx="5" fill="#90e0ef"/><path d="M50 20 L50 40 L65 30 Z" fill="#ff4d6d"/></svg>`,
-        K: `<svg viewBox="0 0 100 100" width="90" height="90"><path d="M50 15 L80 85 L20 85 Z" fill="#ff70a6"/><line x1="50" y1="15" x2="50" y2="85" stroke="#fff" stroke-width="3"/><line x1="35" y1="50" x2="65" y2="50" stroke="#fff" stroke-width="3"/><circle cx="50" cy="90" r="4" fill="#333"/></svg>`,
-        L: `<svg viewBox="0 0 100 100" width="90" height="90"><circle cx="50" cy="50" r="48" fill="#f4a261"/><circle cx="50" cy="50" r="38" fill="#e76f51"/><circle cx="50" cy="50" r="34" fill="#e9c46a"/><circle cx="28" cy="28" r="10" fill="#e76f51"/><circle cx="72" cy="28" r="10" fill="#e76f51"/><circle cx="38" cy="42" r="5" fill="#264653"/><circle cx="62" cy="42" r="5" fill="#264653"/><ellipse cx="50" cy="52" rx="8" ry="6" fill="#fff"/><polygon points="50,53 46,48 54,48" fill="#264653"/><path d="M45 56 Q50 61 55 56" stroke="#264653" stroke-width="2.5" fill="none"/></svg>`,
-        M: `<svg viewBox="0 0 100 100" width="90" height="90"><circle cx="50" cy="50" r="40" fill="#8d5b4c"/><circle cx="18" cy="45" r="12" fill="#d4a373"/><circle cx="82" cy="45" r="12" fill="#d4a373"/><ellipse cx="50" cy="55" rx="25" ry="20" fill="#d4a373"/><circle cx="36" cy="42" r="5" fill="#222"/><circle cx="64" cy="42" r="5" fill="#222"/><ellipse cx="50" cy="54" rx="6" ry="4" fill="#222"/><path d="M42 62 Q50 68 58 62" stroke="#222" stroke-width="2.5" fill="none"/></svg>`,
-        N: `<svg viewBox="0 0 100 100" width="90" height="90"><ellipse cx="50" cy="60" rx="35" ry="25" fill="#d4a373"/><circle cx="35" cy="45" r="8" fill="#fff"/><circle cx="50" cy="40" r="8" fill="#fff"/><circle cx="65" cy="45" r="8" fill="#fff"/><circle cx="35" cy="45" r="3" fill="#3a86ff"/><circle cx="50" cy="40" r="3" fill="#3a86ff"/><circle cx="65" cy="45" r="3" fill="#3a86ff"/></svg>`,
-        O: `<svg viewBox="0 0 100 100" width="90" height="90"><circle cx="50" cy="50" r="42" fill="#9d4edd"/><circle cx="38" cy="45" r="10" fill="#fff"/><circle cx="62" cy="45" r="10" fill="#fff"/><circle cx="38" cy="45" r="4" fill="#000"/><circle cx="62" cy="45" r="4" fill="#000"/><polygon points="50,55 42,65 58,65" fill="#ffb703"/></svg>`,
-        P: `<svg viewBox="0 0 100 100" width="90" height="90"><ellipse cx="50" cy="55" rx="30" ry="38" fill="#2b2d42"/><ellipse cx="50" cy="58" rx="20" ry="26" fill="#fff"/><circle cx="40" cy="40" r="4" fill="#000"/><circle cx="60" cy="40" r="4" fill="#000"/><polygon points="50,46 45,52 55,52" fill="#ffb703"/><polygon points="40,90 48,98 35,98" fill="#ffb703"/><polygon points="60,90 68,98 52,98" fill="#ffb703"/></svg>`,
-        Q: `<svg viewBox="0 0 100 100" width="90" height="90"><circle cx="50" cy="50" r="40" fill="#ffe5ec"/><path d="M50 10 Q70 20 80 40 Q50 35 20 40 Q30 20 50 10 Z" fill="#ff4d6d"/><circle cx="38" cy="45" r="4" fill="#333"/><circle cx="62" cy="45" r="4" fill="#333"/><path d="M46 56 Q50 60 54 56" stroke="#333" stroke-width="2" fill="none"/><polygon points="50,15 45,28 55,28" fill="#ffd166"/></svg>`,
-        R: `<svg viewBox="0 0 100 100" width="90" height="90"><circle cx="50" cy="58" r="38" fill="#f8f9fa"/><ellipse cx="32" cy="22" rx="9" ry="22" fill="#f8f9fa"/><ellipse cx="32" cy="22" rx="5" ry="16" fill="#ffb703"/><ellipse cx="68" cy="22" rx="9" ry="22" fill="#f8f9fa"/><ellipse cx="68" cy="22" rx="5" ry="16" fill="#ffb703"/><circle cx="36" cy="52" r="5" fill="#333"/><circle cx="64" cy="52" r="5" fill="#333"/><ellipse cx="50" cy="60" rx="4" ry="3" fill="#ff4d6d"/><path d="M46 64 Q50 68 54 64" stroke="#333" stroke-width="2" fill="none"/></svg>`,
-        S: `<svg viewBox="0 0 100 100" width="90" height="90"><circle cx="50" cy="50" r="42" fill="#ffb703"/><path d="M50 12 L60 38 L88 38 L65 54 L74 82 L50 65 L26 82 L35 54 L12 38 L40 38 Z" fill="#ffd166"/></svg>`,
-        T: `<svg viewBox="0 0 100 100" width="90" height="90"><path d="M50 20 L25 55 L38 55 L20 80 L80 80 L62 55 L75 55 Z" fill="#52b788"/><rect x="44" y="70" width="12" height="20" fill="#744210"/><circle cx="30" cy="35" r="10" fill="#74c69d"/><circle cx="70" cy="35" r="10" fill="#74c69d"/><circle cx="50" cy="25" r="12" fill="#b7e4c7"/></svg>`,
-        U: `<svg viewBox="0 0 100 100" width="90" height="90"><path d="M50 10 C20 10 10 60 50 85 C90 60 80 10 50 10 Z" fill="#ff4d6d"/><rect x="46" y="85" width="8" height="12" fill="#ffb703"/><path d="M40 97 L60 97" stroke="#ffb703" stroke-width="4"/></svg>`,
-        V: `<svg viewBox="0 0 100 100" width="90" height="90"><path d="M30 20 C20 50 20 70 50 85 C80 70 80 50 70 20 Z" fill="#7209b7"/><line x1="30" y1="30" x2="30" y2="70" stroke="#f72585" stroke-width="3"/><line x1="70" y1="30" x2="70" y2="70" stroke="#f72585" stroke-width="3"/><line x1="50" y1="35" x2="50" y2="80" stroke="#4cc9f0" stroke-width="3"/></svg>`,
-        W: `<svg viewBox="0 0 100 100" width="90" height="90"><ellipse cx="50" cy="55" rx="35" ry="25" fill="#52b788"/><path d="M85 55 L98 45 L98 65 Z" fill="#2d6a4f"/><circle cx="32" cy="48" r="4" fill="#000"/><path d="M40 30 Q50 15 60 30 T80 30" stroke="#ff4d6d" stroke-width="4" fill="none"/></svg>`,
-        X: `<svg viewBox="0 0 100 100" width="90" height="90"><rect x="15" y="55" width="70" height="25" fill="#d4a373" rx="4"/><circle cx="25" cy="85" r="8" fill="#333"/><circle cx="75" cy="85" r="8" fill="#333"/><rect x="25" y="30" width="50" height="25" fill="#e76f51" rx="4"/><polygon points="20,55 35,20 65,20 80,55" fill="#ffb703"/></svg>`,
-        Y: `<svg viewBox="0 0 100 100" width="90" height="90"><path d="M20 75 L80 75 L50 25 Z" fill="#00b4d8"/><polygon points="80,75 95,65 95,85" fill="#0077b6"/><polygon points="50,25 45,10 55,10" fill="#ff4d6d"/><line x1="35" y1="50" x2="65" y2="50" stroke="#fff" stroke-width="3"/></svg>`,
-        Z: `<svg viewBox="0 0 100 100" width="90" height="90"><circle cx="50" cy="50" r="44" fill="#f8f9fa" stroke="#333" stroke-width="3"/><polygon points="20,15 32,30 18,38" fill="#333"/><polygon points="80,15 68,30 82,38" fill="#333"/><line x1="10" y1="50" x2="32" y2="50" stroke="#333" stroke-width="4"/><line x1="90" y1="50" x2="68" y2="50" stroke="#333" stroke-width="4"/><line x1="18" y1="36" x2="36" y2="40" stroke="#333" stroke-width="4"/><line x1="82" y1="36" x2="64" y2="40" stroke="#333" stroke-width="4"/><circle cx="36" cy="46" r="5" fill="#333"/><circle cx="64" cy="46" r="5" fill="#333"/><ellipse cx="50" cy="58" rx="8" ry="5" fill="#333"/></svg>`
+        A: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#ffe5ec"/>
+            <path d="M50 28 C42 16 22 18 18 36 C14 54 26 78 44 82 C48 83 50 81 50 81 C50 81 52 83 56 82 C74 78 86 54 82 36 C78 18 58 16 50 28 Z" fill="#e63946"/>
+            <path d="M30 34 C24 40 24 50 26 58" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+            <path d="M50 28 C50 18 55 10 60 8" stroke="#6f4e37" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <path d="M54 18 C64 12 74 16 72 26 C62 26 54 22 54 18 Z" fill="#52b788"/>
+            <path d="M54 18 Q62 21 68 23" stroke="#2d6a4f" stroke-width="1.5" fill="none"/>
+        </svg>`,
+        B: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#e0f2fe"/>
+            <ellipse cx="50" cy="40" rx="26" ry="30" fill="#3b82f6"/>
+            <path d="M38 24 C34 30 34 40 36 46" stroke="#ffffff" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6"/>
+            <polygon points="50,70 45,76 55,76" fill="#2563eb"/>
+            <path d="M50 76 Q54 84 46 92" stroke="#64748b" stroke-width="2.5" fill="none"/>
+        </svg>`,
+        C: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#fef3c7"/>
+            <polygon points="18,22 36,36 18,48" fill="#f59e0b"/>
+            <polygon points="82,22 64,36 82,48" fill="#f59e0b"/>
+            <circle cx="50" cy="54" r="32" fill="#fbbf24"/>
+            <circle cx="36" cy="48" r="5.5" fill="#1e3a8a"/>
+            <circle cx="64" cy="48" r="5.5" fill="#1e3a8a"/>
+            <circle cx="38" cy="46" r="1.8" fill="#ffffff"/>
+            <circle cx="66" cy="46" r="1.8" fill="#ffffff"/>
+            <polygon points="50,56 45,52 55,52" fill="#ef4444"/>
+            <path d="M45 60 Q50 65 55 60" stroke="#1e293b" stroke-width="2.5" fill="none"/>
+            <line x1="20" y1="52" x2="35" y2="54" stroke="#1e293b" stroke-width="2"/>
+            <line x1="80" y1="52" x2="65" y2="54" stroke="#1e293b" stroke-width="2"/>
+            <line x1="20" y1="58" x2="35" y2="57" stroke="#1e293b" stroke-width="2"/>
+            <line x1="80" y1="58" x2="65" y2="57" stroke="#1e293b" stroke-width="2"/>
+        </svg>`,
+        D: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#fef9c3"/>
+            <circle cx="50" cy="52" r="30" fill="#fde047"/>
+            <ellipse cx="18" cy="44" rx="11" ry="20" fill="#ea580c"/>
+            <ellipse cx="82" cy="44" rx="11" ry="20" fill="#ea580c"/>
+            <circle cx="38" cy="44" r="5" fill="#1e293b"/>
+            <circle cx="62" cy="44" r="5" fill="#1e293b"/>
+            <circle cx="40" cy="42" r="1.8" fill="#ffffff"/>
+            <circle cx="64" cy="42" r="1.8" fill="#ffffff"/>
+            <ellipse cx="50" cy="54" rx="9" ry="6" fill="#ffffff"/>
+            <ellipse cx="50" cy="52" rx="4.5" ry="3.5" fill="#1e293b"/>
+            <path d="M46 58 Q50 64 54 58" stroke="#1e293b" stroke-width="2.5" fill="none"/>
+            <path d="M50 62 Q50 70 54 70 Q58 70 56 62 Z" fill="#ef4444"/>
+        </svg>`,
+        E: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#e0f2fe"/>
+            <circle cx="20" cy="46" r="18" fill="#93c5fd"/>
+            <circle cx="80" cy="46" r="18" fill="#93c5fd"/>
+            <circle cx="50" cy="50" r="28" fill="#bfdbfe"/>
+            <circle cx="38" cy="44" r="4.5" fill="#1e293b"/>
+            <circle cx="62" cy="44" r="4.5" fill="#1e293b"/>
+            <path d="M48 50 C48 72 58 74 66 66" stroke="#93c5fd" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <path d="M42 62 Q45 68 47 62" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none"/>
+        </svg>`,
+        F: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#cffafe"/>
+            <ellipse cx="46" cy="50" rx="28" ry="18" fill="#f97316"/>
+            <path d="M38 33 Q40 50 38 67" stroke="#ffffff" stroke-width="6" fill="none"/>
+            <path d="M52 35 Q54 50 52 65" stroke="#ffffff" stroke-width="5" fill="none"/>
+            <polygon points="72,50 88,34 88,66" fill="#ea580c"/>
+            <circle cx="30" cy="45" r="4.5" fill="#0f172a"/>
+            <circle cx="32" cy="43" r="1.5" fill="#ffffff"/>
+            <circle cx="16" cy="38" r="3.5" fill="#38bdf8" opacity="0.8"/>
+            <circle cx="12" cy="28" r="2.5" fill="#38bdf8" opacity="0.8"/>
+        </svg>`,
+        G: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#fef3c7"/>
+            <rect x="44" y="44" width="14" height="40" fill="#fde047"/>
+            <circle cx="48" cy="62" r="3.5" fill="#b45309"/>
+            <circle cx="54" cy="74" r="4" fill="#b45309"/>
+            <circle cx="50" cy="36" r="20" fill="#fde047"/>
+            <rect x="38" y="16" width="5" height="12" fill="#d97706"/>
+            <circle cx="40" cy="15" r="4" fill="#78350f"/>
+            <rect x="57" y="16" width="5" height="12" fill="#d97706"/>
+            <circle cx="59" cy="15" r="4" fill="#78350f"/>
+            <ellipse cx="28" cy="34" rx="8" ry="4" fill="#fde047" transform="rotate(-30 28 34)"/>
+            <ellipse cx="72" cy="34" rx="8" ry="4" fill="#fde047" transform="rotate(30 72 34)"/>
+            <circle cx="42" cy="32" r="3.5" fill="#1e293b"/>
+            <circle cx="58" cy="32" r="3.5" fill="#1e293b"/>
+            <ellipse cx="50" cy="44" rx="12" ry="8" fill="#fef08a"/>
+            <circle cx="45" cy="43" r="2" fill="#78350f"/>
+            <circle cx="55" cy="43" r="2" fill="#78350f"/>
+        </svg>`,
+        H: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#fee2e2"/>
+            <rect x="64" y="24" width="8" height="18" fill="#dc2626"/>
+            <circle cx="68" cy="18" r="4" fill="#e2e8f0"/>
+            <circle cx="73" cy="11" r="5" fill="#e2e8f0"/>
+            <polygon points="50,22 18,48 82,48" fill="#ef4444"/>
+            <rect x="25" y="48" width="50" height="34" fill="#fef08a"/>
+            <rect x="42" y="58" width="16" height="24" rx="2" fill="#b45309"/>
+            <circle cx="53" cy="70" r="1.5" fill="#fef08a"/>
+            <rect x="30" y="54" width="9" height="9" fill="#67e8f9"/>
+            <rect x="61" y="54" width="9" height="9" fill="#67e8f9"/>
+        </svg>`,
+        I: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#fef9c3"/>
+            <polygon points="32,48 68,48 50,88" fill="#d97706"/>
+            <line x1="38" y1="56" x2="62" y2="56" stroke="#b45309" stroke-width="1.5"/>
+            <line x1="42" y1="66" x2="58" y2="66" stroke="#b45309" stroke-width="1.5"/>
+            <circle cx="50" cy="42" r="18" fill="#f43f5e"/>
+            <circle cx="50" cy="28" r="14" fill="#fbcfe8"/>
+            <rect x="44" y="24" width="3" height="1.5" fill="#3b82f6"/>
+            <rect x="52" y="26" width="3" height="1.5" fill="#eab308"/>
+            <rect x="48" y="30" width="3" height="1.5" fill="#10b981"/>
+            <circle cx="50" cy="14" r="5.5" fill="#b91c1c"/>
+            <path d="M50 12 Q56 4 60 7" stroke="#15803d" stroke-width="2" fill="none"/>
+        </svg>`,
+        J: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#ffedd5"/>
+            <path d="M56 12 L56 22 L66 16" stroke="#ef4444" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <rect x="30" y="26" width="40" height="56" rx="6" fill="#fb923c"/>
+            <rect x="35" y="32" width="30" height="44" rx="4" fill="#fff7ed"/>
+            <circle cx="50" cy="54" r="12" fill="#f97316"/>
+            <circle cx="50" cy="54" r="10" fill="#ffedd5"/>
+            <circle cx="50" cy="54" r="8" fill="#ea580c"/>
+        </svg>`,
+        K: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#f3e8ff"/>
+            <polygon points="50,14 78,44 50,76 22,44" fill="#f43f5e"/>
+            <polygon points="50,14 50,76 22,44" fill="#fbbf24"/>
+            <polygon points="50,44 78,44 50,76" fill="#3b82f6"/>
+            <polygon points="50,14 78,44 50,44" fill="#10b981"/>
+            <line x1="50" y1="14" x2="50" y2="76" stroke="#ffffff" stroke-width="2"/>
+            <line x1="22" y1="44" x2="78" y2="44" stroke="#ffffff" stroke-width="2"/>
+            <path d="M50 76 Q58 84 52 92" stroke="#64748b" stroke-width="2" fill="none"/>
+            <polygon points="50,82 54,84 50,86 46,84" fill="#ec4899"/>
+            <polygon points="54,88 58,90 54,92 50,90" fill="#3b82f6"/>
+        </svg>`,
+        L: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#ffedd5"/>
+            <circle cx="50" cy="50" r="38" fill="#ea580c"/>
+            <circle cx="50" cy="50" r="28" fill="#fbbf24"/>
+            <circle cx="28" cy="30" r="9" fill="#ea580c"/>
+            <circle cx="72" cy="30" r="9" fill="#ea580c"/>
+            <circle cx="39" cy="45" r="4.5" fill="#1e293b"/>
+            <circle cx="61" cy="45" r="4.5" fill="#1e293b"/>
+            <circle cx="41" cy="43" r="1.5" fill="#ffffff"/>
+            <circle cx="63" cy="43" r="1.5" fill="#ffffff"/>
+            <ellipse cx="50" cy="55" rx="9" ry="6" fill="#fef08a"/>
+            <polygon points="50,55 46,50 54,50" fill="#78350f"/>
+            <path d="M45 59 Q50 64 55 59" stroke="#78350f" stroke-width="2" fill="none"/>
+        </svg>`,
+        M: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#ecfdf5"/>
+            <circle cx="20" cy="48" r="13" fill="#92400e"/>
+            <circle cx="20" cy="48" r="8" fill="#fcd34d"/>
+            <circle cx="80" cy="48" r="13" fill="#92400e"/>
+            <circle cx="80" cy="48" r="8" fill="#fcd34d"/>
+            <circle cx="50" cy="50" r="30" fill="#92400e"/>
+            <ellipse cx="50" cy="58" rx="20" ry="14" fill="#fcd34d"/>
+            <circle cx="38" cy="44" r="4.5" fill="#1e293b"/>
+            <circle cx="62" cy="44" r="4.5" fill="#1e293b"/>
+            <ellipse cx="50" cy="55" rx="5" ry="3" fill="#1e293b"/>
+            <path d="M44 63 Q50 67 56 63" stroke="#1e293b" stroke-width="2.5" fill="none"/>
+        </svg>`,
+        N: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#fef3c7"/>
+            <ellipse cx="50" cy="62" rx="34" ry="20" fill="#92400e"/>
+            <ellipse cx="50" cy="58" rx="30" ry="15" fill="#b45309"/>
+            <ellipse cx="38" cy="48" rx="8" ry="11" fill="#38bdf8" transform="rotate(-15 38 48)"/>
+            <ellipse cx="62" cy="48" rx="8" ry="11" fill="#38bdf8" transform="rotate(15 62 48)"/>
+            <ellipse cx="50" cy="44" rx="8.5" ry="12" fill="#7dd3fc"/>
+            <circle cx="50" cy="42" r="1.5" fill="#0284c7"/>
+            <circle cx="38" cy="48" r="1.5" fill="#0284c7"/>
+            <circle cx="62" cy="48" r="1.5" fill="#0284c7"/>
+        </svg>`,
+        O: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#f3e8ff"/>
+            <circle cx="50" cy="52" r="32" fill="#7c3aed"/>
+            <circle cx="36" cy="44" r="13" fill="#ffffff"/>
+            <circle cx="64" cy="44" r="13" fill="#ffffff"/>
+            <circle cx="36" cy="44" r="6.5" fill="#0f172a"/>
+            <circle cx="64" cy="44" r="6.5" fill="#0f172a"/>
+            <circle cx="39" cy="41" r="2.5" fill="#ffffff"/>
+            <circle cx="67" cy="41" r="2.5" fill="#ffffff"/>
+            <polygon points="50,52 44,62 56,62" fill="#f59e0b"/>
+            <polygon points="26,24 38,34 26,38" fill="#5b21b6"/>
+            <polygon points="74,24 62,34 74,38" fill="#5b21b6"/>
+        </svg>`,
+        P: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#e0f2fe"/>
+            <ellipse cx="50" cy="54" rx="26" ry="32" fill="#0f172a"/>
+            <ellipse cx="50" cy="58" rx="16" ry="24" fill="#ffffff"/>
+            <circle cx="41" cy="40" r="3.5" fill="#000"/>
+            <circle cx="59" cy="40" r="3.5" fill="#000"/>
+            <circle cx="42" cy="39" r="1.2" fill="#fff"/>
+            <circle cx="60" cy="39" r="1.2" fill="#fff"/>
+            <polygon points="50,46 44,52 56,52" fill="#f97316"/>
+            <ellipse cx="40" cy="85" rx="7" ry="4" fill="#f97316"/>
+            <ellipse cx="60" cy="85" rx="7" ry="4" fill="#f97316"/>
+        </svg>`,
+        Q: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#fce7f3"/>
+            <circle cx="50" cy="56" r="24" fill="#fed7aa"/>
+            <circle cx="30" cy="56" r="9" fill="#92400e"/>
+            <circle cx="70" cy="56" r="9" fill="#92400e"/>
+            <polygon points="30,36 36,18 50,28 64,18 70,36" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/>
+            <circle cx="36" cy="18" r="3" fill="#ef4444"/>
+            <circle cx="50" cy="28" r="3" fill="#3b82f6"/>
+            <circle cx="64" cy="18" r="3" fill="#10b981"/>
+            <circle cx="42" cy="54" r="3" fill="#1e293b"/>
+            <circle cx="58" cy="54" r="3" fill="#1e293b"/>
+            <path d="M45 64 Q50 68 55 64" stroke="#e11d48" stroke-width="2" fill="none"/>
+        </svg>`,
+        R: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#ecfdf5"/>
+            <ellipse cx="36" cy="24" rx="8" ry="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+            <ellipse cx="36" cy="24" rx="4.5" ry="14" fill="#fbcfe8"/>
+            <ellipse cx="64" cy="24" rx="8" ry="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+            <ellipse cx="64" cy="24" rx="4.5" ry="14" fill="#fbcfe8"/>
+            <circle cx="50" cy="56" r="28" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+            <circle cx="38" cy="52" r="3.5" fill="#1e293b"/>
+            <circle cx="62" cy="52" r="3.5" fill="#1e293b"/>
+            <ellipse cx="50" cy="60" rx="3.5" ry="2.5" fill="#f43f5e"/>
+            <path d="M46 64 Q50 68 54 64" stroke="#1e293b" stroke-width="1.5" fill="none"/>
+            <line x1="24" y1="58" x2="36" y2="60" stroke="#94a3b8" stroke-width="1.5"/>
+            <line x1="76" y1="58" x2="64" y2="60" stroke="#94a3b8" stroke-width="1.5"/>
+        </svg>`,
+        S: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#eff6ff"/>
+            <polygon points="50,14 59,36 84,36 64,50 71,74 50,60 29,74 36,50 16,36 41,36" fill="#facc15" stroke="#eab308" stroke-width="2"/>
+            <circle cx="43" cy="42" r="3" fill="#1e293b"/>
+            <circle cx="57" cy="42" r="3" fill="#1e293b"/>
+            <path d="M46 48 Q50 53 54 48" stroke="#1e293b" stroke-width="2" fill="none"/>
+            <circle cx="38" cy="46" r="3" fill="#fca5a5" opacity="0.8"/>
+            <circle cx="62" cy="46" r="3" fill="#fca5a5" opacity="0.8"/>
+        </svg>`,
+        T: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#f0fdf4"/>
+            <rect x="43" y="54" width="14" height="32" rx="3" fill="#78350f"/>
+            <circle cx="50" cy="38" r="26" fill="#22c55e"/>
+            <circle cx="34" cy="42" r="16" fill="#16a34a"/>
+            <circle cx="66" cy="42" r="16" fill="#16a34a"/>
+            <circle cx="50" cy="26" r="16" fill="#4ade80"/>
+            <circle cx="42" cy="36" r="3.5" fill="#ef4444"/>
+            <circle cx="58" cy="34" r="3.5" fill="#ef4444"/>
+            <circle cx="50" cy="46" r="3.5" fill="#ef4444"/>
+        </svg>`,
+        U: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#e0f2fe"/>
+            <circle cx="20" cy="28" r="2.5" fill="#38bdf8"/>
+            <circle cx="80" cy="28" r="2.5" fill="#38bdf8"/>
+            <circle cx="24" cy="74" r="2.5" fill="#38bdf8"/>
+            <circle cx="76" cy="74" r="2.5" fill="#38bdf8"/>
+            <path d="M50 18 C24 18 18 52 50 58 C82 52 76 18 50 18 Z" fill="#ec4899"/>
+            <path d="M50 18 C38 18 36 52 50 58 Z" fill="#a855f7"/>
+            <line x1="50" y1="18" x2="50" y2="76" stroke="#f59e0b" stroke-width="4"/>
+            <path d="M50 76 C50 84 40 84 40 76" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" fill="none"/>
+        </svg>`,
+        V: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#fef3c7"/>
+            <g transform="translate(50,50) rotate(35) translate(-50,-50)">
+                <rect x="47" y="10" width="6" height="30" fill="#78350f"/>
+                <circle cx="50" cy="10" r="4" fill="#92400e"/>
+                <path d="M38 38 C32 46 32 58 38 66 C42 72 58 72 62 66 C68 58 68 46 62 38 Z" fill="#ea580c"/>
+                <circle cx="50" cy="52" r="5" fill="#78350f"/>
+                <line x1="22" y1="34" x2="78" y2="66" stroke="#f59e0b" stroke-width="3"/>
+            </g>
+        </svg>`,
+        W: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#fef9c3"/>
+            <path d="M18 42 A34 34 0 0 0 82 42 Z" fill="#15803d"/>
+            <path d="M22 42 A30 30 0 0 0 78 42 Z" fill="#bbf7d0"/>
+            <path d="M25 42 A27 27 0 0 0 75 42 Z" fill="#ef4444"/>
+            <ellipse cx="38" cy="49" rx="1.5" ry="2.5" fill="#000"/>
+            <ellipse cx="50" cy="54" rx="1.5" ry="2.5" fill="#000"/>
+            <ellipse cx="62" cy="49" rx="1.5" ry="2.5" fill="#000"/>
+            <ellipse cx="44" cy="58" rx="1.5" ry="2.5" fill="#000"/>
+            <ellipse cx="56" cy="58" rx="1.5" ry="2.5" fill="#000"/>
+        </svg>`,
+        X: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#f3e8ff"/>
+            <rect x="22" y="22" width="56" height="10" rx="4" fill="#ef4444"/>
+            <rect x="25" y="36" width="50" height="10" rx="4" fill="#f59e0b"/>
+            <rect x="28" y="50" width="44" height="10" rx="4" fill="#10b981"/>
+            <rect x="31" y="64" width="38" height="10" rx="4" fill="#3b82f6"/>
+            <line x1="24" y1="78" x2="68" y2="28" stroke="#92400e" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="68" cy="28" r="5" fill="#fde047"/>
+        </svg>`,
+        Y: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#e0f2fe"/>
+            <path d="M22 64 L78 64 L68 78 L32 78 Z" fill="#ef4444"/>
+            <path d="M12 76 Q30 70 50 76 T90 76" stroke="#0284c7" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <line x1="50" y1="20" x2="50" y2="64" stroke="#78350f" stroke-width="3"/>
+            <polygon points="52,22 52,60 82,60" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+            <polygon points="48,28 48,60 26,60" fill="#facc15"/>
+            <polygon points="50,20 50,14 60,17" fill="#3b82f6"/>
+        </svg>`,
+        Z: `<svg viewBox="0 0 100 100" width="120" height="120">
+            <circle cx="50" cy="50" r="46" fill="#f0fdf4"/>
+            <circle cx="50" cy="52" r="30" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+            <polygon points="26,22 36,36 26,42" fill="#1e293b"/>
+            <polygon points="74,22 64,36 74,42" fill="#1e293b"/>
+            <path d="M24 52 Q38 50 42 54" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+            <path d="M76 52 Q62 50 58 54" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+            <circle cx="39" cy="46" r="3.5" fill="#1e293b"/>
+            <circle cx="61" cy="46" r="3.5" fill="#1e293b"/>
+            <ellipse cx="50" cy="60" rx="10" ry="7" fill="#1e293b"/>
+            <circle cx="46" cy="59" r="1.5" fill="#ffffff"/>
+            <circle cx="54" cy="59" r="1.5" fill="#ffffff"/>
+        </svg>`
     },
 
     themes: {
-        jungle: `<svg viewBox="0 0 100 100" width="75" height="75"><rect width="100" height="100" rx="20" fill="#2d6a4f"/><path d="M50 20 L25 55 L38 55 L20 80 L80 80 L62 55 L75 55 Z" fill="#52b788"/><rect x="44" y="70" width="12" height="20" fill="#744210"/><circle cx="30" cy="35" r="10" fill="#74c69d"/><circle cx="70" cy="35" r="10" fill="#74c69d"/><circle cx="50" cy="25" r="12" fill="#b7e4c7"/></svg>`,
-        space: `<svg viewBox="0 0 100 100" width="75" height="75"><rect width="100" height="100" rx="20" fill="#0b091a"/><path d="M50 15 C60 30 65 50 60 75 L40 75 C35 50 40 30 50 15 Z" fill="#ff4d6d"/><path d="M50 15 L40 35 L60 35 Z" fill="#fff"/><circle cx="50" cy="45" r="7" fill="#3a86ff"/><path d="M35 65 L20 80 L38 75 Z" fill="#ffb703"/><path d="M65 65 L80 80 L62 75 Z" fill="#ffb703"/><path d="M42 75 L50 90 L58 75 Z" fill="#ff758f"/><circle cx="20" cy="25" r="2" fill="#fff"/><circle cx="80" cy="30" r="3" fill="#ffb703"/><circle cx="75" cy="70" r="2" fill="#fff"/></svg>`,
-        ocean: `<svg viewBox="0 0 100 100" width="75" height="75"><rect width="100" height="100" rx="20" fill="#0077b6"/><path d="M0 60 Q25 45 50 60 T100 60 L100 100 L0 100 Z" fill="#00b4d8"/><path d="M0 75 Q25 65 50 75 T100 75 L100 100 L0 100 Z" fill="#90e0ef"/><path d="M30 50 C45 30 75 35 75 55 C75 65 60 70 45 65 Z" fill="#48cae4"/><path d="M75 55 L90 45 L90 65 Z" fill="#48cae4"/><circle cx="40" cy="45" r="3" fill="#03045e"/></svg>`,
-        fantasy: `<svg viewBox="0 0 100 100" width="75" height="75"><rect width="100" height="100" rx="20" fill="#3b1766"/><rect x="20" y="45" width="20" height="40" fill="#ff70a6"/><rect x="60" y="45" width="20" height="40" fill="#ff70a6"/><rect x="35" y="35" width="30" height="50" fill="#ff9770"/><polygon points="20,45 30,20 40,45" fill="#ffd670"/><polygon points="60,45 70,20 80,45" fill="#ffd670"/><polygon points="35,35 50,10 65,35" fill="#ff70a6"/><path d="M42 65 A8 8 0 0 1 58 65 L58 85 L42 85 Z" fill="#3b1766"/></svg>`,
         rainbow: `<svg viewBox="0 0 100 100" width="75" height="75"><rect width="100" height="100" rx="20" fill="#fff0a6"/><path d="M10 80 A40 40 0 0 1 90 80" fill="none" stroke="#ff4d6d" stroke-width="8"/><path d="M18 80 A32 32 0 0 1 82 80" fill="none" stroke="#ffb703" stroke-width="8"/><path d="M26 80 A24 24 0 0 1 74 80" fill="none" stroke="#52b788" stroke-width="8"/><path d="M34 80 A16 16 0 0 1 66 80" fill="none" stroke="#3a86ff" stroke-width="8"/><circle cx="20" cy="80" r="14" fill="#fff"/><circle cx="32" cy="75" r="12" fill="#fff"/><circle cx="80" cy="80" r="14" fill="#fff"/><circle cx="68" cy="75" r="12" fill="#fff"/></svg>`
     },
 
@@ -45,14 +318,32 @@ const YellowPawsIcons = {
     },
 
     animals: {
-        Dog: `<svg viewBox="0 0 100 100" width="95" height="95"><circle cx="50" cy="50" r="45" fill="#ffd93d"/><ellipse cx="18" cy="45" rx="12" ry="22" fill="#e76f51"/><ellipse cx="82" cy="45" rx="12" ry="22" fill="#e76f51"/><circle cx="38" cy="42" r="6" fill="#264653"/><circle cx="62" cy="42" r="6" fill="#264653"/><ellipse cx="50" cy="55" rx="10" ry="7" fill="#f4a261"/><ellipse cx="50" cy="53" rx="5" ry="4" fill="#264653"/><path d="M45 60 Q50 66 55 60" stroke="#264653" stroke-width="3" fill="none"/></svg>`,
-        Cat: `<svg viewBox="0 0 100 100" width="95" height="95"><circle cx="50" cy="50" r="45" fill="#ffb703"/><polygon points="15,15 35,30 15,45" fill="#fb8500"/><polygon points="85,15 65,30 85,45" fill="#fb8500"/><circle cx="35" cy="45" r="6" fill="#2196f3"/><circle cx="65" cy="45" r="6" fill="#2196f3"/><polygon points="50,54 45,50 55,50" fill="#ff4d6d"/><path d="M45 58 Q50 63 55 58" stroke="#333" stroke-width="2.5" fill="none"/><line x1="20" y1="50" x2="35" y2="52" stroke="#333" stroke-width="2"/><line x1="80" y1="50" x2="65" y2="52" stroke="#333" stroke-width="2"/></svg>`,
-        Lion: `<svg viewBox="0 0 100 100" width="95" height="95"><circle cx="50" cy="50" r="48" fill="#f4a261"/><circle cx="50" cy="50" r="38" fill="#e76f51"/><circle cx="50" cy="50" r="34" fill="#e9c46a"/><circle cx="28" cy="28" r="10" fill="#e76f51"/><circle cx="72" cy="28" r="10" fill="#e76f51"/><circle cx="38" cy="42" r="5" fill="#264653"/><circle cx="62" cy="42" r="5" fill="#264653"/><ellipse cx="50" cy="52" rx="8" ry="6" fill="#fff"/><polygon points="50,53 46,48 54,48" fill="#264653"/><path d="M45 56 Q50 61 55 56" stroke="#264653" stroke-width="2.5" fill="none"/></svg>`,
-        Elephant: `<svg viewBox="0 0 100 100" width="95" height="95"><circle cx="50" cy="50" r="40" fill="#90e0ef"/><circle cx="20" cy="45" r="18" fill="#48cae4"/><circle cx="80" cy="45" r="18" fill="#48cae4"/><circle cx="38" cy="42" r="5" fill="#03045e"/><circle cx="62" cy="42" r="5" fill="#03045e"/><path d="M46 50 C46 70 54 75 62 65" stroke="#48cae4" stroke-width="8" stroke-linecap="round" fill="none"/></svg>`,
-        Monkey: `<svg viewBox="0 0 100 100" width="95" height="95"><circle cx="50" cy="50" r="40" fill="#8d5b4c"/><circle cx="18" cy="45" r="12" fill="#d4a373"/><circle cx="82" cy="45" r="12" fill="#d4a373"/><ellipse cx="50" cy="55" rx="25" ry="20" fill="#d4a373"/><circle cx="36" cy="42" r="5" fill="#222"/><circle cx="64" cy="42" r="5" fill="#222"/><ellipse cx="50" cy="54" rx="6" ry="4" fill="#222"/><path d="M42 62 Q50 68 58 62" stroke="#222" stroke-width="2.5" fill="none"/></svg>`,
-        Tiger: `<svg viewBox="0 0 100 100" width="95" height="95"><circle cx="50" cy="50" r="44" fill="#fb8500"/><circle cx="22" cy="22" r="10" fill="#fb8500"/><circle cx="78" cy="22" r="10" fill="#fb8500"/><path d="M50 10 L46 22 L54 22 Z" fill="#222"/><path d="M25 30 L38 34 L30 40 Z" fill="#222"/><path d="M75 30 L62 34 L70 40 Z" fill="#222"/><circle cx="36" cy="46" r="5" fill="#222"/><circle cx="64" cy="46" r="5" fill="#222"/><polygon points="50,56 45,50 55,50" fill="#ff4d6d"/><path d="M44 60 Q50 65 56 60" stroke="#222" stroke-width="2.5" fill="none"/></svg>`,
-        Rabbit: `<svg viewBox="0 0 100 100" width="95" height="95"><circle cx="50" cy="58" r="38" fill="#f8f9fa"/><ellipse cx="32" cy="22" rx="9" ry="22" fill="#f8f9fa"/><ellipse cx="32" cy="22" rx="5" ry="16" fill="#ffb703"/><ellipse cx="68" cy="22" rx="9" ry="22" fill="#f8f9fa"/><ellipse cx="68" cy="22" rx="5" ry="16" fill="#ffb703"/><circle cx="36" cy="52" r="5" fill="#333"/><circle cx="64" cy="52" r="5" fill="#333"/><ellipse cx="50" cy="60" rx="4" ry="3" fill="#ff4d6d"/><path d="M46 64 Q50 68 54 64" stroke="#333" stroke-width="2" fill="none"/></svg>`,
-        Zebra: `<svg viewBox="0 0 100 100" width="95" height="95"><circle cx="50" cy="50" r="44" fill="#f8f9fa" stroke="#333" stroke-width="3"/><polygon points="20,15 32,30 18,38" fill="#333"/><polygon points="80,15 68,30 82,38" fill="#333"/><line x1="10" y1="50" x2="32" y2="50" stroke="#333" stroke-width="4"/><line x1="90" y1="50" x2="68" y2="50" stroke="#333" stroke-width="4"/><line x1="18" y1="36" x2="36" y2="40" stroke="#333" stroke-width="4"/><line x1="82" y1="36" x2="64" y2="40" stroke="#333" stroke-width="4"/><circle cx="36" cy="46" r="5" fill="#333"/><circle cx="64" cy="46" r="5" fill="#333"/><ellipse cx="50" cy="58" rx="8" ry="5" fill="#333"/></svg>`
+        Alligator: `<img src="assets/avatars/alligator.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Alligator">`,
+        Bear: `<img src="assets/avatars/bear.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Bear">`,
+        Cat: `<img src="assets/avatars/kitten.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Cat">`,
+        Dog: `<img src="assets/avatars/puppy.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Dog">`,
+        Elephant: `<img src="assets/avatars/elephant.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Elephant">`,
+        Fox: `<img src="assets/avatars/fox.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Fox">`,
+        Giraffe: `<img src="assets/avatars/giraffe.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Giraffe">`,
+        Hippo: `<img src="assets/avatars/hippo.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Hippo">`,
+        Iguana: `<img src="assets/avatars/iguana.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Iguana">`,
+        Jellyfish: `<img src="assets/avatars/jellyfish.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Jellyfish">`,
+        Kangaroo: `<img src="assets/avatars/kangaroo.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Kangaroo">`,
+        Lion: `<img src="assets/avatars/lion.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Lion">`,
+        Monkey: `<img src="assets/avatars/monkey.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Monkey">`,
+        Newt: `<img src="assets/avatars/newt.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Newt">`,
+        Owl: `<img src="assets/avatars/owl.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Owl">`,
+        Penguin: `<img src="assets/avatars/penguin.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Penguin">`,
+        Quail: `<img src="assets/avatars/quail.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Quail">`,
+        Rabbit: `<img src="assets/avatars/bunny.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Rabbit">`,
+        Sheep: `<img src="assets/avatars/sheep.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Sheep">`,
+        Tiger: `<img src="assets/avatars/tiger.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Tiger">`,
+        Unicorn: `<img src="assets/avatars/unicorn.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Unicorn">`,
+        Vulture: `<img src="assets/avatars/vulture.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Vulture">`,
+        Whale: `<img src="assets/avatars/whale.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Whale">`,
+        "X-ray Fish": `<img src="assets/avatars/xrayfish.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="X-ray Fish">`,
+        Yak: `<img src="assets/avatars/yak.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Yak">`,
+        Zebra: `<img src="assets/avatars/zebra.png" style="width:130px; height:130px; object-fit:contain; border-radius:50%; border: 4px solid #2563eb; background: #ffffff; box-sizing: border-box;" alt="Zebra">`
     },
 
     shapes: {

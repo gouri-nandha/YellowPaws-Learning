@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (avatarContainer) {
         const avName = profile.avatar || "Puppy";
         const avFileMap = {
-            Puppy: "assets/avatars/puppy.svg",
-            Kitten: "assets/avatars/kitten.svg",
-            "Lion Cub": "assets/avatars/lion.svg",
-            Bunny: "assets/avatars/bunny.svg"
+            Puppy: "assets/avatars/puppy.png",
+            Kitten: "assets/avatars/kitten.png",
+            "Lion Cub": "assets/avatars/lion.png",
+            Bunny: "assets/avatars/bunny.png"
         };
-        const avatarSrc = avFileMap[avName] || "assets/avatars/puppy.svg";
+        const avatarSrc = avFileMap[avName] || "assets/avatars/puppy.png";
         avatarContainer.innerHTML = `<img src="${avatarSrc}" style="width:65px; height:65px; object-fit:contain; border-radius:50%; border:3px solid #FFD93D;" alt="${avName}">`;
     }
 

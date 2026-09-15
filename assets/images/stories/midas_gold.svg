@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+  <rect width="400" height="240" rx="20" fill="#fffbeb"/>
+  <!-- Royal Palace Floor -->
+  <path d="M0 160 Q150 145 300 160 T400 155 L400 240 L0 240 Z" fill="#fde68a"/>
+  <!-- Red Carpet -->
+  <polygon points="120,240 280,240 250,160 150,160" fill="#e11d48"/>
+
+  <!-- King Midas -->
+  <g transform="translate(130, 60)">
+    <!-- Golden Crown -->
+    <polygon points="40,25 48,5 56,18 64,5 72,25" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+    <circle cx="48" cy="5" r="2.5" fill="#ef4444"/>
+    <circle cx="56" cy="18" r="2.5" fill="#3b82f6"/>
+    <circle cx="64" cy="5" r="2.5" fill="#10b981"/>
+    <!-- Head -->
+    <circle cx="56" cy="42" r="22" fill="#fed7aa"/>
+    <!-- Beard -->
+    <path d="M40 50 Q56 75 72 50 Z" fill="#92400e"/>
+    <circle cx="50" cy="38" r="2.5" fill="#1e293b"/>
+    <circle cx="62" cy="38" r="2.5" fill="#1e293b"/>
+    <path d="M52 46 Q56 49 60 46" stroke="#1e293b" stroke-width="2" fill="none"/>
+    <!-- Royal Robe -->
+    <path d="M30 65 L82 65 L95 140 L17 140 Z" fill="#7c3aed"/>
+    <!-- Gold Trim -->
+    <rect x="52" y="65" width="8" height="75" fill="#f59e0b"/>
+    <!-- Hand Touching Rose -->
+    <ellipse cx="98" cy="85" rx="8" ry="6" fill="#fed7aa"/>
+  </g>
+
+  <!-- Table with Golden Items and Rose turning Gold -->
+  <g transform="translate(250, 115)">
+    <!-- Table -->
+    <rect x="0" y="45" width="85" height="10" rx="3" fill="#92400e"/>
+    <rect x="10" y="55" width="8" height="35" fill="#78350f"/>
+    <rect x="65" y="55" width="8" height="35" fill="#78350f"/>
+    <!-- Solid Gold Goblet -->
+    <polygon points="15,45 28,45 25,25 18,25" fill="#facc15" stroke="#ca8a04" stroke-width="1.5"/>
+    <rect x="20" y="32" width="3" height="13" fill="#eab308"/>
+    <!-- Rose being touched into Gold -->
+    <line x1="-15" y1="30" x2="-2" y2="45" stroke="#16a34a" stroke-width="3"/>
+    <!-- Golden Rose blossom -->
+    <circle cx="-16" cy="28" r="10" fill="#facc15" stroke="#ca8a04" stroke-width="1.5"/>
+    <circle cx="-16" cy="28" r="5" fill="#fef08a"/>
+  </g>
+
+  <!-- Golden Sparkles radiating -->
+  <text x="215" y="115" font-size="24">✨</text>
+  <text x="270" y="90" font-size="20">✨</text>
+  <text x="245" y="60" font-size="24">⭐</text>
+</svg>

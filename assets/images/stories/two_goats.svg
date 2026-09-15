@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+  <rect width="400" height="240" rx="20" fill="#f0fdf4"/>
+  <!-- Mountain Canyon & Rushing River Below -->
+  <path d="M0 170 Q200 150 400 170 L400 240 L0 240 Z" fill="#0284c7"/>
+  <path d="M50 185 Q200 170 350 185" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+  <!-- Narrow Wooden Plank Bridge -->
+  <rect x="60" y="140" width="280" height="14" rx="4" fill="#92400e"/>
+  <line x1="60" y1="140" x2="340" y2="140" stroke="#78350f" stroke-width="2"/>
+  <line x1="80" y1="140" x2="80" y2="154" stroke="#78350f" stroke-width="2.5"/>
+  <line x1="140" y1="140" x2="140" y2="154" stroke="#78350f" stroke-width="2.5"/>
+  <line x1="200" y1="140" x2="200" y2="154" stroke="#78350f" stroke-width="2.5"/>
+  <line x1="260" y1="140" x2="260" y2="154" stroke="#78350f" stroke-width="2.5"/>
+  <line x1="320" y1="140" x2="320" y2="154" stroke="#78350f" stroke-width="2.5"/>
+
+  <!-- Left White Goat -->
+  <g transform="translate(130, 85)">
+    <ellipse cx="25" cy="35" rx="26" ry="18" fill="#f8fafc"/>
+    <circle cx="50" cy="22" r="14" fill="#f8fafc"/>
+    <!-- Horns -->
+    <path d="M46 12 Q40 -4 34 2" stroke="#64748b" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+    <circle cx="52" cy="20" r="2.5" fill="#0f172a"/>
+    <!-- Little Beard -->
+    <polygon points="56,28 62,35 52,32" fill="#e2e8f0"/>
+    <!-- Legs on plank -->
+    <line x1="12" y1="48" x2="12" y2="55" stroke="#f8fafc" stroke-width="5" stroke-linecap="round"/>
+    <line x1="38" y1="48" x2="42" y2="55" stroke="#f8fafc" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Right Brown Goat Locking Horns in Middle -->
+  <g transform="translate(205, 85)">
+    <ellipse cx="35" cy="35" rx="26" ry="18" fill="#b45309"/>
+    <circle cx="10" cy="22" r="14" fill="#b45309"/>
+    <!-- Horns pointing left -->
+    <path d="M14 12 Q20 -4 26 2" stroke="#78350f" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+    <circle cx="8" cy="20" r="2.5" fill="#0f172a"/>
+    <!-- Little Beard -->
+    <polygon points="4,28 -2,35 8,32" fill="#92400e"/>
+    <!-- Legs on plank -->
+    <line x1="22" y1="48" x2="18" y2="55" stroke="#b45309" stroke-width="5" stroke-linecap="round"/>
+    <line x1="48" y1="48" x2="48" y2="55" stroke="#b45309" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Clash / Stubborn sparks in middle -->
+  <text x="188" y="90" font-size="20">💥</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+  <rect width="400" height="240" rx="20" fill="#ecfdf5"/>
+  <!-- Sparkling River -->
+  <path d="M0 130 Q100 110 200 130 T400 120 L400 240 L0 240 Z" fill="#6ee7b7"/>
+  <path d="M0 160 Q120 140 240 160 T400 150 L400 240 L0 240 Z" fill="#34d399"/>
+  <path d="M0 190 Q150 170 300 190 T400 180 L400 240 L0 240 Z" fill="#10b981"/>
+
+  <!-- Honest Woodcutter on Left River Bank -->
+  <circle cx="85" cy="100" r="22" fill="#fed7aa"/>
+  <circle cx="80" cy="98" r="3" fill="#1e293b"/>
+  <path d="M78 106 Q85 112 92 106" stroke="#1e293b" stroke-width="2.5" fill="none"/>
+  <!-- Cap -->
+  <path d="M63 92 Q85 70 107 92 Z" fill="#b91c1c"/>
+  <!-- Body / Plaid Shirt -->
+  <rect x="68" y="122" width="34" height="42" rx="6" fill="#ef4444"/>
+  <!-- Legs -->
+  <rect x="70" y="164" width="12" height="35" rx="4" fill="#1e3a8a"/>
+  <rect x="88" y="164" width="12" height="35" rx="4" fill="#1e3a8a"/>
+
+  <!-- River Fairy in Water -->
+  <circle cx="280" cy="95" r="22" fill="#fef08a"/>
+  <ellipse cx="270" cy="85" rx="15" ry="25" fill="#a7f3d0" transform="rotate(-30 270 85)"/>
+  <ellipse cx="300" cy="85" rx="15" ry="25" fill="#a7f3d0" transform="rotate(30 300 85)"/>
+  <circle cx="275" cy="94" r="3" fill="#047857"/>
+  <circle cx="285" cy="94" r="3" fill="#047857"/>
+  <path d="M276 102 Q280 106 284 102" stroke="#047857" stroke-width="2" fill="none"/>
+  <path d="M260 117 Q280 140 300 117 L310 180 Q280 190 250 180 Z" fill="#67e8f9" opacity="0.85"/>
+
+  <!-- Golden Axe, Silver Axe, Iron Axe Presented -->
+  <!-- Golden Axe -->
+  <g transform="translate(160, 80) rotate(-25)">
+    <rect x="0" y="0" width="8" height="45" rx="2" fill="#b45309"/>
+    <polygon points="8,5 26,0 28,20 8,15" fill="#fbbf24"/>
+    <circle cx="18" cy="10" r="3" fill="#fef08a"/>
+  </g>
+  <!-- Silver Axe -->
+  <g transform="translate(195, 75)">
+    <rect x="0" y="0" width="8" height="45" rx="2" fill="#64748b"/>
+    <polygon points="8,5 26,0 28,20 8,15" fill="#e2e8f0"/>
+  </g>
+  <!-- Sparkles -->
+  <text x="145" y="65" font-size="20">✨</text>
+  <text x="215" y="60" font-size="18">⭐</text>
+</svg>

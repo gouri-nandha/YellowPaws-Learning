@@ -118,6 +118,11 @@ function showQuizResults() {
     const resultCard = document.getElementById("resultCard");
     resultCard.style.display = "block";
 
+    const outerHubBtn = document.getElementById("quizBackToHubBtn");
+    if (outerHubBtn) {
+        outerHubBtn.style.display = "none";
+    }
+
     document.getElementById("finalScore").textContent = `${score} / ${dailyQuestions.length}`;
     
     // Add stars
@@ -144,6 +149,12 @@ function restartQuiz() {
     generateDailyQuiz();
     document.getElementById("quizCard").style.display = "block";
     document.getElementById("resultCard").style.display = "none";
+
+    const outerHubBtn = document.getElementById("quizBackToHubBtn");
+    if (outerHubBtn) {
+        outerHubBtn.style.display = "inline-flex";
+    }
+
     loadQuestion();
 }
 
