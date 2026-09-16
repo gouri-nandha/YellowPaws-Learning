@@ -3,10 +3,18 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-yellowpaws-learning-secret-key-super-safe'
-DEBUG = True
-ALLOWED_HOSTS = ['*']
+SECRET_KEY = os.environ.get(
+    'SECRET_KEY',
+    'django-insecure-yellowpaws-learning-secret-key-super-safe'
+)
 
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+
+ALLOWED_HOSTS = [
+    'yellowpaws-backend.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
