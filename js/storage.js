@@ -1,5 +1,5 @@
 // YellowPaws Unified Storage & Django Backend API Manager
-const API_BASE_URL = "http://localhost:8000/api";
+const API_BASE_URL = "https://yellowpaws-backend.onrender.com/api";
 
 const YellowPawsStorage = {
     getProfile() {
@@ -122,10 +122,10 @@ const YellowPawsStorage = {
         let profile = this.getProfile();
         if (!profile) return;
         if (!profile.learningHistory) profile.learningHistory = [];
-        
+
         const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
         const logEntry = `${activity} - ${timestamp}`;
-        
+
         // Prevent duplicate consecutive entries
         if (profile.learningHistory.length > 0 && profile.learningHistory[0] === logEntry) {
             return;
